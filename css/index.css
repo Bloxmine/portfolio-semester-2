@@ -1,0 +1,86 @@
+:root
+{
+    --background: #000000;
+    --text-color: #ffffff;
+    --title-text-color: #000000;
+    --nav-color: #FFD915;
+    --font-family: 'AtramentWeb', Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--background);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+}
+
+#navcontainer {
+    display: flex;
+    height: 282px;
+    width: 800px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: relative;
+}
+
+.earth {
+    background-image: url(../images/earth.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-right: 0; /* Remove space to the right */
+}
+
+.navbar {
+    box-sizing: border-box;
+    width: 2000px;
+    height: 100px;
+    justify-content: center;
+    align-items: center; 
+    position: relative;
+    background-color: var(--nav-color);
+}
+
+.navbar a {
+    color: var(--title-text-color);
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 50px;
+}
+
+.navbar a:hover {
+    background-color: var(--background);
+    color: var(--text-color);
+    border-radius: 10%;
+}
+
+h1 {
+    color: var(--title-text-color);
+    text-align: center;
+}
+
+h2 {
+    color: var(--title-text-color);
+    text-align: center;
+}
+
+.backgroundimage {
+    background-image: url(../images/bg/gradientdots.png);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: repeat-x;
+    z-index: -1;
+}
+
+@font-face {
+    font-family: 'AtramentWeb';
+    src: url(../fonts/AtramentWeb.woff) format('woff');
+    font-style: sans-serif;
+}
