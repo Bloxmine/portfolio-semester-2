@@ -16,46 +16,60 @@ body {
 
 #navcontainer {
     display: flex;
-    height: 282px;
-    width: 800px;
+    height: 200px;
+    width: 100vw;
     justify-content: center;
     align-items: center;
-    margin: auto;
+    margin-left: 100px;
     position: relative;
 }
 
-.earth {
-    background-image: url(../images/earth.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: block;
-    width: 100%;
-    height: 100%;
-    margin-right: 0; /* Remove space to the right */
-}
 
 .navbar {
     box-sizing: border-box;
-    width: 2000px;
-    height: 100px;
-    justify-content: center;
+    width: 100%;
+    height: 200px;
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
     align-items: center; 
     position: relative;
-    background-color: var(--nav-color);
+    background-image: url('../images/svg/titlebar.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .navbar a {
     color: var(--title-text-color);
-    padding: 14px 20px;
+    padding: 1vw;
+    margin-left: 200px;
     text-decoration: none;
     text-align: center;
-    font-size: 50px;
+    font-size: 3vw;
 }
 
 .navbar a:hover {
     background-color: var(--background);
     color: var(--text-color);
     border-radius: 10%;
+}
+
+.navbar a.active {
+    background-color: var(--background);
+    color: var(--text-color);
+    border-radius: 10%;
+}
+
+#rightside {
+    background-image: url('../images/svg/rightside.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    position: relative;
 }
 
 h1 {
