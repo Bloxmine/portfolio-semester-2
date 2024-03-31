@@ -1,5 +1,6 @@
 // three.js code with a lil help from the docs and troubleshooting shoutout to the AI revolution.
 import * as THREE from 'https://threejs.org/build/three.module.js';
+import { OrbitControls } from 'https://threejs.org/examples/jsm/controls/OrbitControls.js';
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -8,6 +9,8 @@ const renderer = new THREE.WebGLRenderer({ alpha: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 renderer.domElement.className = 'earth';
+
+const controls = new OrbitControls(camera, renderer.domElement);
 
 // spotlight for lighting, penumbra is the softness of the light's edge, that's a donkey bridge.
 const spotlight = new THREE.SpotLight(0xffffff, 250, 100, Math.PI/4, 1, 2);
@@ -48,17 +51,31 @@ textureLoader.load('../images/earthmap1k.jpg', function(texture) {
 
                 camera.position.z = 2;
 
-                // render loop
+                const controls = new OrbitControls(camera, renderer.domElement);
+                
+                window.addEventListener('mousedown', function() {
+                    controls.autoRotate = false;
+                });
+                
+                window.addEventListener('mouseup', function() {
+                    controls.autoRotate = true;
+                });
+                
                 const animate = function () {
                     requestAnimationFrame(animate);
-
+                
+                    // controls
+                    controls.update();
+                
                     // speeeeen
-                    earth.rotation.y += 0.01;
-                    cloud.rotation.y += 0.01;
-
+                    if (!controls.autoRotate) {
+                        earth.rotation.y += 0.01;
+                        cloud.rotation.y += 0.01;
+                    }
+                
                     renderer.render(scene, camera);
                 };
-
+                
                 animate();
             });
         });
