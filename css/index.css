@@ -72,6 +72,15 @@ body {
     position: relative;
 }
 
+.earth {
+    position: absolute;
+    z-index: 1;
+    left: 11.5%;
+    top: 15.5%;
+    aspect-ratio: 1;
+    transform: translate(-50%, -50%) scale(0.18);
+}
+
 h1 {
     color: var(--title-text-color);
     text-align: center;
