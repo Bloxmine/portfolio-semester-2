@@ -19,7 +19,7 @@ spotlight.angle = Math.PI/4;
 spotlight.penumbra = 1;
 scene.add(spotlight);
 
-// Load texture
+// load textures
 const textureLoader = new THREE.TextureLoader();
 textureLoader.load('../images/earthmap1k.jpg', function(texture) {
     textureLoader.load('../images/earthbump1k.jpg', function(bumpMap) {

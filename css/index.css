@@ -33,10 +33,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center; 
-    position: relative;
+    position: static;
     background-image: url('../images/svg/titlebar.svg');
     background-repeat: no-repeat;
     background-size: contain;
+    transform: translate(0, 0);
 }
 
 .navbar a {
@@ -75,10 +76,10 @@ body {
 .earth {
     position: absolute;
     z-index: 1;
-    left: 11.3%;
-    top: 22.5%;
+    left: 11.7vw; /* Adjust this value as needed */
+    top: 16.4vh; /* Adjust this value as needed */
     aspect-ratio: 1;
-    transform: translate(-50%, -50%) scale(0.25);
+    transform: translate(-50%, -50%) scale(0.19);
 }
 
 h1 {
