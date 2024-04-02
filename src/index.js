@@ -1,4 +1,4 @@
-// three.js code with a lil help from the docs and troubleshooting shoutout to the AI revolution.
+// three.js code with a lil help from the docs and troubleshooting
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
@@ -9,15 +9,22 @@ const renderer = new THREE.WebGLRenderer({ alpha: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 renderer.domElement.className = 'earth';
-
+// orbital controls for rotating the globe
 const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableZoom = false;
 
 // spotlight for lighting, penumbra is the softness of the light's edge, that's a donkey bridge.
-const spotlight = new THREE.SpotLight(0xffffff, 250, 100, Math.PI/4, 1, 2);
+const spotlight = new THREE.SpotLight(0xffffff, 250, 100);
 spotlight.position.set(-6, 4, 5);
+// spotlight.color.setRGB(0, 0, 1);
 spotlight.angle = Math.PI/4;
 spotlight.penumbra = 1;
 scene.add(spotlight);
+
+// ambient light for the rest of the scene
+// const ambientLight = new THREE.AmbientLight(0x404040);
+// ambientLight.color.setRGB(0, 0, 1);
+// scene.add(ambientLight);
 
 // load textures
 const textureLoader = new THREE.TextureLoader();
@@ -50,14 +57,12 @@ textureLoader.load('../images/earthmap1k.jpg', function(texture) {
                 scene.add(cloud);
 
                 camera.position.z = 2;
-
-                const controls = new OrbitControls(camera, renderer.domElement);
                 
-                window.addEventListener('mousedown', function() {
+                earth.addEventListener('mousedown', function() {
                     controls.autoRotate = false;
                 });
                 
-                window.addEventListener('mouseup', function() {
+                earth.addEventListener('mouseup', function() {
                     controls.autoRotate = true;
                 });
                 
