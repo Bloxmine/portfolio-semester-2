@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "gsap": "^3.12.5",
     "path-browserify": "^1.0.1",
     "three": "^0.163.0",
     "three-orbitcontrols": "^2.110.3"

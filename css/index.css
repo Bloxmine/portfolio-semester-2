@@ -17,7 +17,7 @@ body {
 }
 
 .backgroundframe {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     margin-top: 10px;
@@ -84,7 +84,7 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 10px;
-    pointer-events: none; /* Add this line */
+    pointer-events: none;
 }
 
 .main-content {
@@ -93,14 +93,12 @@ body {
     width: 1000px;
     margin-left: 150px;
     margin-right: 120px;
-    overflow-y: scroll; /* Change this line */
     height: 100vh;
     z-index: 2;
-    pointer-events: none; /* Add this line */
+    pointer-events: none;
 }
 
 .text-content {
-    grid-area: main-content;
     margin-top: 200px;
     width: 1000px;
     margin-left: 350px;
@@ -201,7 +199,7 @@ body {
 }
 
 .earth {
-    position: absolute;
+    position: fixed;
     z-index: 6;
     left: 15.2vw; /* Adjust this value as needed */
     top: 14.2vh; /* Adjust this value as needed */

@@ -1,6 +1,10 @@
 // three.js code with a lil help from the docs and troubleshooting
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -86,3 +90,13 @@ textureLoader.load('../images/earthmap1k.jpg', function(texture) {
         });
     });
 });
+
+gsap.to(".text-content", {
+    scrollTrigger: {
+      trigger: ".text-content",
+      start: "top top",
+      end: "bottom bottom",
+      scrub: true
+    },
+    y: -200, // or any other value you want
+  });
