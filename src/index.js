@@ -91,12 +91,12 @@ textureLoader.load('../images/earthmap1k.jpg', function(texture) {
     });
 });
 
-gsap.to(".text-content", {
-    scrollTrigger: {
-      trigger: ".text-content",
-      start: "top top",
-      end: "bottom bottom",
-      scrub: true
-    },
-    y: -200, // or any other value you want
-  });
+const blackDiv = document.createElement('div');
+blackDiv.style.position = 'fixed';
+blackDiv.style.top = '0';
+blackDiv.style.left = '0';
+blackDiv.style.width = '100%';
+blackDiv.style.height = '100px';
+blackDiv.style.backgroundColor = 'black';
+blackDiv.style.zIndex = '0';
+document.body.appendChild(blackDiv);

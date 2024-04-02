@@ -14,6 +14,9 @@ body {
     font-family: var(--font-family);
     margin: 0;
     padding: 0;
+    width: 1680px; /* Set the width of the body */
+    height: 1050px; /* Set the height of the body */
+    overflow: auto; /* Add scrollbars if the viewport is smaller than the body */
 }
 
 .backgroundframe {
@@ -28,6 +31,7 @@ body {
     background-size: 100vw 100vh;
     transform: translate(0, 0);
     z-index: 2;
+    pointer-events: none;
 }
 
 #navcontainer {
