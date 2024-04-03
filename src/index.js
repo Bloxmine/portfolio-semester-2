@@ -91,6 +91,8 @@ textureLoader.load('../images/earthmap1k.jpg', function(texture) {
     });
 });
 
+// gsap animations
+
 const blackDiv = document.createElement('div');
 blackDiv.style.position = 'fixed';
 blackDiv.style.top = '0';
