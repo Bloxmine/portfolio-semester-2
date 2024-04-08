@@ -1,6 +1,7 @@
 // three.js code with a lil help from the docs and troubleshooting
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+// potential gsap
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -16,6 +17,7 @@ renderer.domElement.className = 'earth';
 // orbital controls for rotating the globe
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableZoom = false;
+
 
 // spotlight for lighting, penumbra is the softness of the light's edge, that's a donkey bridge.
 const spotlight = new THREE.SpotLight(0xffffff, 250, 100);
@@ -92,7 +94,7 @@ textureLoader.load('../images/earthmap1k.jpg', function(texture) {
 });
 
 // gsap animations
-
+// making a div, probably should be in the css 
 const blackDiv = document.createElement('div');
 blackDiv.style.position = 'fixed';
 blackDiv.style.top = '0';
