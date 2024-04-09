@@ -1,0 +1,442 @@
+/* this is the CSS file for the portfolio page, unused blocks are to be expected */
+:root
+{
+    --background: #000000;
+    --text-color: #ffffff;
+    --title-text-color: #000000;
+    --nav-color: #FFD915;
+    --font-family: 'AtramentWeb', Arial, Helvetica, sans-serif;
+    --earth-background-image: url('../images/svg/backgroundearth.svg');
+    --background-frame-image: url('../images/svg/bg.svg');
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: var(--font-family);
+    overflow-y: scroll;
+    background-color: #000000;
+    transition: background-color 1s;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 80%, black 100%);
+    z-index: 9999;
+    pointer-events: none;
+}
+
+h1 {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    margin: 50px auto;
+    font-size: 50px;
+    font-family: var(--font-family);
+    color: white;
+}
+
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4), 0px 0px 20px rgba(255, 255, 255, 0.4), 0px 0px 30px rgba(255, 255, 255, 0.4);
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+
+
+#checkbox {
+    background-color: red;
+}
+
+#skyline {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 200px;
+    background-image: url('../images/skyline.png');
+    background-repeat: repeat-x;
+    z-index: 0;
+}
+
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.blur-box {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    /* -webkit-backdrop-filter: blur(150px); */
+    filter: blur(150px);
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    background-color: rgba(45, 45, 45, 0.1);
+}
+
+.star {
+    position: fixed;
+    top: -10px;
+    width: 200px;
+    height: 400px;
+    background-color: #ffffff;
+    animation: rotateing 50s ease-in-out infinite;
+}
+
+@keyframes rotateing {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.5);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+.airplane {
+    position: absolute;
+    top: -10px;
+    width: 3px;
+    height: 3px;
+    background-color: #ff0606;
+    border-radius: 50%;
+    animation: flash 1s linear infinite;
+}
+
+
+@keyframes flash {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.4), 0px 0px 20px rgba(0, 255, 0, 0.4), 0px 0px 30px rgba(0, 255, 0, 0.4);
+    }
+    20%, 24%, 55% {
+        box-shadow: none;
+    }
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+
+#title-container {
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 10px;
+    padding: 5px;
+    margin: 50px auto;
+    width: 200px;
+    position: relative;
+    z-index: 2;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+
+#navbar a {
+    color: #ffffff;
+    font-family: var(--font-family);
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+#navbar a:hover {
+    text-shadow: 0px 0px 10px #ffffff;
+}
+
+#navbar a:active {
+    color: #bfbfbf;
+}
+
+#about {
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 50px auto;
+    width: 800px;
+    position: relative;
+    z-index: 2;
+
+}
+
+#about h2 {
+    color: white;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: auto;
+    font-size: 3rem;
+}
+
+#about p {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+#parent-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px auto;
+    width: 800px;
+    align-items: stretch;
+}
+
+#about-container {
+    box-sizing: border-box;
+    background-color: var(--nav-color);
+    border-radius: 10px;
+    width: 100px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex: 0; /* This will make the about-container take up only the space it needs */
+    max-width: 200px; /* Adjust as needed */
+    margin-right: 10px; /* Adjust as needed */
+}
+
+.portfolio-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 20px;
+    width: 800px;
+    position: relative;
+    z-index: 2;
+}
+
+.portfolio-container .box {
+    flex: 1 0 calc(33.333% - 20px);
+    margin: 10px;
+    background-color: var(--nav-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out, opacity 0.5s ease-in-out, max-height 0.5s ease-in-out, margin 0.5s ease-in-out;
+    text-decoration: none;
+    max-height: 1000px;
+    overflow: hidden;
+    animation-fill-mode: forwards;
+    transition: all 0.5s ease-in-out;
+}
+
+#about-container div {
+    position: relative;
+    padding: 10px;
+    background-color: var(--nav-color)
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    flex: 1;
+}
+
+#about-container div:hover {
+    background-image: linear-gradient(#9dcdf5, #ffffff);
+}
+
+#about-container div span {
+    margin-top: 5px;
+    font-size: 12px;
+    color: black;
+}
+
+#about-container div::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    color: black;
+}
+
+#about-container div.checked {
+    background-color: #9dcdf5;
+}
+
+#about-container div.checked span {
+    color: rgb(29, 79, 150);
+}
+
+#about-container div.checked:hover {
+    color: rgb(29, 79, 150);
+}
+
+#check-container {
+    box-sizing: border-box;
+    background-color: var(--nav-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 50px auto;
+    width: 800px;
+    position: relative;
+    z-index: 2;
+}
+
+.hidden {
+    opacity: 0;
+    max-height: 0;
+    margin: 0;
+    transform: scale(0);
+}
+
+.visible {
+    opacity: 1;
+    max-height: 1000px;
+    margin: 10px;
+    transform: scale(1);
+    animation: grow 0.5s ease-in-out forwards;
+}
+
+.unhighlight {
+    box-shadow: 0 0 10px #add8e6, 0 0 20px #add8e6, 0 0 30px #add8e6, 0 0 40px #add8e6;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+    animation: standout 1s ease-in-out;
+}
+
+@keyframes standout {
+    0% {
+        box-shadow: none;
+        transform: scale(1);
+    }
+    100% {
+        box-shadow: 0 0 10px #add8e6, 0 0 20px #add8e6, 0 0 30px #add8e6, 0 0 40px #add8e6;
+        transform: scale(1.05);
+        background-image: linear-gradient(#8dccff, #ffffff);
+    }
+}
+
+.highlight {
+    box-shadow: none;
+    transform: scale(1);
+    transition: all 0.3s ease;
+}
+
+.box-gone {
+    display: none;
+}
+
+@keyframes shrink {
+    from { max-height: 1000px; opacity: 1; }
+    to { max-height: 0; opacity: 0; }
+}
+
+@keyframes grow {
+    from { max-height: 0; opacity: 0; }
+    to { max-height: 1000px; opacity: 1; }
+}
+
+.portfolio-container .box .box-image {
+    position: relative;
+    flex: 1 0 auto;
+    order: 2;
+    margin-top: 10px;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.portfolio-container .box:hover {
+    transform: scale(1.1);
+    background-image: linear-gradient(#9dcdf5, #ffffff)
+}
+
+h2 {
+    color: #000000;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: auto;
+}
+
+p {
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+/* Snow effect */
+.snowflake {
+    position: absolute;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    animation: snowfall linear infinite;
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(calc(100vh - 10px)); /* pile up at the bottom, at least, that's the point */
+    }
+}
+
+/* cloud animation */
+@keyframes cloudMove {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+.foot {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px;
+    margin: 50px auto;
+    width: 800px;
+    position: relative;
+    z-index: 2;
+}
+
+.foot p {
+    color: #d1cece;
+    margin-bottom: 10px;
+}
+
+@font-face {
+    font-family: 'AtramentWeb';
+    src: url(../fonts/AtramentWeb.woff) format('woff');
+    font-style: sans-serif;
+}

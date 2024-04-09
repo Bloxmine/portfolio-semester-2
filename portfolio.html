@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/experiments.css">
+    <title>Semester 2 | Hein Dijstelbloem</title>
+</head>
+<body id="body">
+    <div id="about">
+        <h2>About this page</h2>
+        <p>These are projects I've been working on during the second semester. The bar to the left of the items enables you to easily see which learning outcomes belong to each project, by pressing each outcome.</p>
+    </div>
+    <div id="parent-container">
+        <div id="about-container">
+            <div id="box1" onclick="toggleBoxes('box1')">
+                <span>Interactive Media Products</span>
+            </div>
+            <div id="box2" onclick="toggleBoxes('box2')">
+                <span>Development and Version control</span>
+            </div>
+            <div id="box3" onclick="toggleBoxes('box3')">
+                <span>Interactive design</span>
+            </div>
+            <div id="box4" onclick="toggleBoxes('box4')">
+                <span>Professional standards</span>
+            </div>
+            <div id="box5" onclick="toggleBoxes('box5')">
+                <span>Personal Leadership</span>
+            </div>
+        </div>
+        <div class="portfolio-container">
+            <a href="business.html" class="box box3">
+                <div><h2>Business card</h2><p>Using 3D printing, I've developed a custom business card.</p></div>
+                <img src="../images/portfolio/card.jpg" alt="Business card" class="box-image">
+            </a>
+            <a href="paper.html" class="box box1">
+                <div><h2>Paper prototype</h2><p>Our group made a paper prototype for a game focused on teamwork.</p></div><img src="../images/portfolio/paperpro.jpg" alt="Business card" class="box-image">
+            </a>
+            <a href="portrait.html" class="box box2">
+                <div><h2>Portrait</h2><p>One professional and one 'creative' portrait.</p><br></div><img src="../images/portfolio/portrait.jpg" alt="Business card" class="box-image">
+            </a>
+            <a href="googlesux.html" class="box box1 box3">
+                <div><h2>Google but bad UX</h2></div>
+                <img src="../images/portfolio/googlesux.png" alt="Google" class="box-image">
+            </a>
+            <a href="binggood.html" class="box box1">
+                <div><h2>Bing but good UX</h2></div>
+                <img src="../images/portfolio/binggood.png" alt="Bing" class="box-image">
+            </a>
+        </div>
+    </div>
+    <div id="parent-container">
+    <div class="portfolio-container">
+        <a href="https://github.com/Bloxmine/Hein" class="box box2">
+            <div>
+                <h2>Using Git</h2>
+                <p>This site is built with Git in mind. Here I've linked my own Github repo.</p>
+            </div>
+            <img src="../images/portfolio/github.png" alt="GIT" class="box-image">
+        </a>
+        <a href="about.html" class="box box2">
+            <div>
+                <h2>Personal website</h2>
+                <p>I've been working on my own personal website.</p>
+            </div>
+            <img src="../images/portfolio/personalsite.png" alt="Personal Site" class="box-image">
+        </a>
+        <a href="soundwave.html" class="box box3 box4 box5">
+            <div>
+                <h2>Soundwave Studio</h2>
+                <p>Designing logos and branding for the Fontys Soundlab</p>
+            </div>
+            <img src="../images/portfolio/soundwave.jpg" alt="Soundwave Studio" class="box-image">
+        </a>
+    </div>
+    </div>
+    <!-- bg elements -->
+    <div class="blur-box" data-container></div>
+    <!-- script is now a seperate file -->
+    <script src="js/firstweek.js"></script>
+    <!-- footer -->
+    <div class="foot">
+        <p>Hein Dijstelbloem</p>
+        <p>2024</p>
+    </div>
+</body>
+</html>

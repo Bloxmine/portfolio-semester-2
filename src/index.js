@@ -45,7 +45,8 @@ textureLoader.load('../images/earthmap1k.jpg', function(texture) {
                     bumpMap: bumpMap, 
                     bumpScale: 5,
                     specularMap: specularMap,
-                    specular: new THREE.Color('grey')
+                    specular: new THREE.Color('grey'),
+                    roughness: 0.2,
                 });
                 const earth = new THREE.Mesh(geometry, material);
 
