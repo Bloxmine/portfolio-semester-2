@@ -1,0 +1,139 @@
+:root {
+    --navbar-color: #FFD915;
+    --text-color-primary: #000000;
+    --text-color-secondary: #ffffff;
+    --text-color-active: #ffffff;
+    --background-color: #000000;
+    --font-family: 'AtramentWeb', Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 80%, black 100%);
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: var(--navbar-color);
+    color: var(--text-color-primary);
+    padding: 20px;
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.navbar a {
+    color: var(--text-color-primary);
+    font-family: var(--font-family);
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 2rem;
+}
+
+.navbar a:hover {
+    text-shadow: 0px 0px 10px var(--text-color-secondary);
+}
+
+.navbar a.active {
+    text-shadow: 0px 0px 10px var(--text-color-active), 
+                 0px 0px 20px var(--text-color-active), 
+                 0px 0px 30px var(--text-color-active), 
+                 0px 0px 40px var(--text-color-active);
+}
+
+.navbar-logo {
+    height: 50px; /* Adjust as needed */
+    margin-right: 10px; /* Adjust as needed */
+}
+
+.container {
+    display: flex;
+    flex-grow: 1;
+    height: calc(100% - 40px);
+    justify-content: center;
+}
+
+.container > div {
+    padding: 20px;
+    margin: 0 20px;
+}
+
+/* container text font */
+.container > div {
+    font-family: var(--font-family);
+    color: var(--text-color-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family);
+    color: var(--text-color-primary);
+}
+
+p {
+    font-family: var(--font-family);
+    color: var(--text-color-primary);
+}
+
+.left, .right {
+    flex: 1;
+    background-color: var(--navbar-color);
+}
+
+.middle {
+    flex: 7;
+    background-color: var(--background-color);
+    color: var(--text-color-secondary);
+}
+
+.middle h1 {
+    font-size: 3vw;
+    color: var(--text-color-secondary);
+}
+
+.middle p {
+    font-size: 2.5vw;
+    color: var(--text-color-secondary);
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container > div {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@font-face {
+    font-family: 'AtramentWeb';
+    src: url(../fonts/AtramentWeb.woff) format('woff');
+    font-style: sans-serif;
+}
