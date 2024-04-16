@@ -1,0 +1,74 @@
+:root {
+    --background-color: #000000;
+    --text-color-primary: #000000;
+    --text-color-secondary: #ffffff;
+    --text-color-active: #ffffff;
+    --font-primary: 'AtramentWeb', Arial, Helvetica, sans-serif;
+    --LCARS-button-primary: #AAADFF;
+    --LCARS-button-secondary: #D77C79;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--text-color-secondary);
+    background-color: var(--background-color);
+    font-size: 1.5rem;
+}
+
+.container {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+}
+
+.main {
+    flex: 3;
+}
+
+.learningoutcomes {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.outcomesbutton {
+    background-color: var(--LCARS-button-primary);
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 50px;
+    z-index: 9999;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* interactive media products */
+.outcomesbutton.inte {
+    background-color: #D77C79;
+}
+/* development and version control */
+.outcomesbutton.vers {
+    background-color: #AAADFF;
+}
+/* iterative design */
+.outcomesbutton.iter {
+    background-color: #50ef5a;
+}
+/* professional standard */
+.outcomesbutton.prof {
+    background-color: #f0d84b;
+}
+/* personal leadership */
+.outcomesbutton.lead {
+    background-color: #fa99e1;
+}
+
+@font-face {
+    font-family: 'AtramentWeb';
+    src: url(../fonts/AtramentWeb.woff) format('woff');
+    font-style: sans-serif;
+}

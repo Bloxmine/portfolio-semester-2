@@ -1,0 +1,55 @@
+:root {
+    --background-color: #000000;
+    --text-color-primary: #000000;
+    --text-color-secondary: #ffffff;
+    --text-color-active: #ffffff;
+    --font-primary: 'AtramentWeb', Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--text-color-secondary);
+    background-color: var(--background-color);
+    font-size: 1.5rem;
+}
+
+.container {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+}
+
+.main {
+    flex: 3;
+}
+
+.learningoutcomes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.outcomesbutton {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+@font-face {
+    font-family: 'AtramentWeb';
+    src: url(../fonts/AtramentWeb.woff) format('woff');
+    font-style: sans-serif;
+}

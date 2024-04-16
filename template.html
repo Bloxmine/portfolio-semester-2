@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Learning Outcomes</title>
+    <link rel="stylesheet" href="css/template.css">
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            fetch('../json/struc.json')
+                .then(response => response.json())
+                .then(data => {
+                    const mainDiv = document.querySelector('.main');
+                    mainDiv.innerHTML = generateHTMLFromData(data);
+                });
+        });
+    
+        function generateHTMLFromData(data) {
+            let html = `<h1>${data.name}</h1>`;
+            html += `<p>Image Count: ${data.imageCount}</p>`;
+            html += `<h2>${data.content.title}</h2>`;
+            html += `<p>${data.content.text}</p>`;
+            html += `<footer>${data.footer}</footer>`;
+            return html;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="column"> <!-- This will be the left small column -->
+            <!-- Content goes here -->
+        </div>
+        <div class="main"> <!-- This will be the middle large column -->
+            <!-- Content goes here -->
+        </div>
+        <div class="column"> <!-- This will be the right small column -->
+            <!-- Content goes here -->
+        </div>
+    </div>
+    <div id="content"></div>
+</body>
+</html>
