@@ -7,10 +7,17 @@
     <link rel="stylesheet" href="../projects.css">
 </head>
 <body>
+    <a href="../../portfolio.html">
+        <div class="backbutton">
+            BACK
+        </div>
+    </a>
     <div class="container">
         <div class="column">
         </div>
         <div class="main">
+
+            
             <div class="learningoutcomes">
                 <div class="outcomesbutton prof">PROFESSIONAL STANDARDS</div>
                 <div class="outcomesbutton iter">ITERATIVE DESIGN</div>
@@ -23,5 +30,36 @@
         </div>
     </div>
     <div id="content"></div>
+    <script>
+// Fetch the JSON file
+fetch('../../json/content.json')
+    .then(response => response.json()) // Parse the data as JSON
+    .then(data => {
+        // Select the existing elements
+        const h1 = document.querySelector('h1');
+        const p = document.querySelector('p');
+
+        // Update their content
+        h1.textContent = data.title;
+        p.textContent = data.description;
+
+        // Select the learningoutcomes div
+        const learningOutcomes = document.querySelector('.learningoutcomes');
+
+        // Remove existing outcome buttons
+        while (learningOutcomes.firstChild) {
+            learningOutcomes.firstChild.remove();
+        }
+
+        // Add new outcome buttons
+        data.tags.forEach(tag => {
+            const button = document.createElement('div');
+            button.className = 'outcomesbutton';
+            button.textContent = tag.toUpperCase();
+            learningOutcomes.appendChild(button);
+        });
+    })
+    .catch(error => console.error('Error:', error));
+    </script>
 </body>
 </html>

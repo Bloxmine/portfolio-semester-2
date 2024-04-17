@@ -6,6 +6,7 @@
     --font-primary: 'AtramentWeb', Arial, Helvetica, sans-serif;
     --LCARS-button-primary: #AAADFF;
     --LCARS-button-secondary: #D77C79;
+    --backbutton-color: #FFD915;
 }
 
 body {
@@ -46,21 +47,58 @@ body {
     cursor: pointer;
 }
 
+.backbutton {
+    background-color: var(--backbutton-color);
+    font-size: 1rem;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 50px;
+    z-index: 9999;
+    margin: 10px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+.outcomesbutton:hover {
+    background-color: var(--LCARS-button-secondary);
+}
+
 /* interactive media products */
 .outcomesbutton.inte {
     background-color: #D77C79;
 }
+
+.outcomesbutton.inte:hover {
+    background-color: #ff9e9e;
+}
+
 /* development and version control */
 .outcomesbutton.vers {
     background-color: #AAADFF;
 }
+
+.outcomesbutton.vers:hover {
+    background-color: #d1d1ff;
+}
+
 /* iterative design */
 .outcomesbutton.iter {
     background-color: #50ef5a;
 }
+
+.outcomesbutton.iter:hover {
+    background-color: #7cf57c;
+}
 /* professional standard */
 .outcomesbutton.prof {
     background-color: #f0d84b;
+}
+
+.outcomesbutton.prof:hover {
+    background-color: #f5e77c;
 }
 /* personal leadership */
 .outcomesbutton.lead {
