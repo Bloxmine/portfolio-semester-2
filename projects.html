@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SoundWave Studio</title>
-    <link rel="stylesheet" href="../projects.css">
+    <link rel="stylesheet" href="/projects/projects.css">
 </head>
 <body>
     <a href="../../portfolio.html">
@@ -31,7 +31,7 @@
     </div>
     <div id="content"></div>
     <script>
-        fetch('../../json/soundwave.json')
+        fetch('/json/soundwave.json')
             .then(response => response.json()) // Parse the data as JSON
             .then(data => {
                 // Select the existing elements
@@ -61,7 +61,7 @@
             })
             .catch(error => console.error('Error:', error));
         // Fetch the JSON file for buttons
-        fetch('../../json/buttons.json')
+        fetch('/json/buttons.json')
             .then(response => response.json()) // Parse the data as JSON
             .then(buttonsData => {
                 // Select the buttons div

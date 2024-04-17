@@ -76,11 +76,11 @@ body {
 }
 
 /* development and version control */
-.outcomesbutton.vers {
+.outcomesbutton.deve {
     background-color: #AAADFF;
 }
 
-.outcomesbutton.vers:hover {
+.outcomesbutton.deve:hover {
     background-color: #d1d1ff;
 }
 
