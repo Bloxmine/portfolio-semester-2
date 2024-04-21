@@ -105,6 +105,21 @@ body {
     background-color: #fa99e1;
 }
 
+.imagebox {
+    background-color: var(--backbutton-color);
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    margin-top: 40px;
+}
+
+.imagefile {
+    width: 10%;
+    height: auto;
+    border-radius: 10px;
+}
+
 @font-face {
     font-family: 'AtramentWeb';
     src: url(../fonts/AtramentWeb.woff) format('woff');

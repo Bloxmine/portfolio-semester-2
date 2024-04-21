@@ -6,6 +6,7 @@
     <title>SoundWave Studio</title>
     <link rel="stylesheet" href="../projects.css">
 </head>
+<script src="../../js/gsap.min.js"></script>
 <body>
     <a href="../../portfolio.html">
         <div class="backbutton">
@@ -27,31 +28,29 @@
             <p>content</p>
         </div>
         <div class="column">
+            <div class="imagebox">
+                <div class="imagefile"></div>
+            </div>
         </div>
     </div>
     <div id="content"></div>
     <script>
         fetch('../../json/soundwave.json')
-            .then(response => response.json()) // Parse the data as JSON
+            .then(response => response.json()) // json parse
             .then(data => {
-                // Select the existing elements
+                // using existing elements
                 const h1 = document.querySelector('h1');
                 const p = document.querySelectorAll('p');
 
-                // Update their content
                 h1.textContent = data.title;
                 p[0].textContent = data.description;
                 p[1].textContent = data.pagecontent;
 
-                // Select the learningoutcomes div
                 const learningOutcomes = document.querySelector('.learningoutcomes');
-
-                // Remove existing outcome buttons
                 while (learningOutcomes.firstChild) {
                     learningOutcomes.firstChild.remove();
                 }
 
-                // Add new outcome buttons
                 data.tags.forEach(tag => {
                     const button = document.createElement('div');
                     button.className = 'outcomesbutton ' + tag.slice(0, 4);
@@ -60,46 +59,51 @@
                 });
             })
             .catch(error => console.error('Error:', error));
-        // Fetch the JSON file for buttons
+        // buttons json file
         fetch('../../json/buttons.json')
-            .then(response => response.json()) // Parse the data as JSON
+            .then(response => response.json()) // json parse
             .then(buttonsData => {
-                // Select the buttons div
                 const buttonsDiv = document.querySelector('#buttons');
 
-                // Create buttons
                 buttonsData.forEach(buttonData => {
                     const button = document.createElement('button');
                     button.textContent = buttonData.name;
                     button.addEventListener('click', () => {
-                        // Fetch the JSON file for the clicked button
                         fetch(`../../json/${buttonData.file}`)
-                            .then(response => response.json()) // Parse the data as JSON
+                            .then(response => response.json())
                             .then(data => {
-                                // Select the existing elements
                                 const h1 = document.querySelector('h1');
                                 const p = document.querySelectorAll('p');
+                                const imagefileDiv = document.querySelector('.imagefile');
 
-                                // Update their content
                                 h1.textContent = data.title;
                                 p[0].textContent = data.description;
                                 p[1].textContent = data.pagecontent;
 
-                                // Select the learningoutcomes div
+                                while (imagefileDiv.firstChild) {
+                                    imagefileDiv.firstChild.remove();
+                                }
+
+                                const img = document.createElement('img');
+                                img.src = data.imagefile;
+                                imagefileDiv.appendChild(img);
+
                                 const learningOutcomes = document.querySelector('.learningoutcomes');
 
-                                // Remove existing outcome buttons
                                 while (learningOutcomes.firstChild) {
                                     learningOutcomes.firstChild.remove();
                                 }
-
-                                // Add new outcome buttons
                                 data.tags.forEach(tag => {
                                     const outcomeButton = document.createElement('div');
                                     outcomeButton.className = 'outcomesbutton ' + tag.slice(0, 4);
                                     outcomeButton.textContent = tag.toUpperCase();
                                     learningOutcomes.appendChild(outcomeButton);
                                 });
+
+                                gsap.from(h1, { duration: 1, y: -100, opacity: 0 });
+                                gsap.from(p, { duration: 1, y: -100, opacity: 0, stagger: 0.2 });
+                                gsap.from('.outcomesbutton', { duration: 1, y: -50, opacity: 0, stagger: 0.2 });
+                                gsap.from(img, { duration: 1, y: -50, opacity: 0 });
                             })
                             .catch(error => console.error('Error:', error));
                     });
