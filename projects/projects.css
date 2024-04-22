@@ -37,6 +37,13 @@ body {
     margin-bottom: 20px;
 }
 
+.content {
+    margin: 20px;
+    border: #000000 5px solid;
+    border-radius: 20px;
+    padding: 20px;
+}
+
 .outcomesbutton {
     background-color: var(--LCARS-button-primary);
     font-size: 1rem;
@@ -106,7 +113,6 @@ body {
 }
 
 .imagebox {
-    background-color: var(--backbutton-color);
     padding: 10px;
     border-radius: 10px;
     width: 300px;

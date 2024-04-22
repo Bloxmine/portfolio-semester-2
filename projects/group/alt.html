@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundWave Studio</title>
+    <link rel="stylesheet" href="../projects.css">
+</head>
+<script src="../../js/gsap.min.js"></script>
+<body>
+    <a href="../../portfolio.html">
+        <div class="backbutton">
+            BACK
+        </div>
+    </a>
+    <div class="container">
+        <div class="column">
+        </div>
+        <div class="main">
+            <div id="buttons"></div>
+            <div class="learningoutcomes">
+                <div class="outcomesbutton inte">INTERACTIVE</div>
+                <div class="outcomesbutton deve">DEVELOPMENT</div>
+                <div class="outcomesbutton prof">PROFESSIONAL STANDARDS</div>
+                <div class="outcomesbutton iter">ITERATIVE DESIGN</div>
+                <div class="outcomesbutton lead">LEADERSHIP</div>
+            </div>
+        <div class="content">
+            <h1>Learning outcomes, explained.</h1>
+            <p>description</p>
+            <p>content</p>
+        </div>
+        </div>
+        <div class="column">
+            <div class="imagebox">
+                <div class="imagefile"></div>
+            </div>
+        </div>
+    </div>
+    <div id="content"></div>
+    <script>
+        // JSON loader when pressing a certain button
+        const buttons = document.querySelectorAll('.outcomesbutton');
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                // using the class name to get the json file
+                const className = this.className.split(' ')[1];
+                const jsonFile = className + '.json';
+
+                // fetch the JSON file
+                fetch(jsonFile)
+                    .then(response => {
+                        // error checking
+                        if (!response.ok) {
+                            throw new Error(`FLAGRANT SYSTEM ERROR!! status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        const contentDiv = document.querySelector('.content');
+                        const h1 = contentDiv.querySelector('h1');
+                        h1.textContent = data.title;
+                        const p = contentDiv.querySelector('p');
+                        p.textContent = data.description;
+                        contentDiv.querySelectorAll('p')[1].textContent = data.pagecontent;
+
+                        const imagefileDiv = document.querySelector('.imagefile');
+                        while (imagefileDiv.firstChild) {
+                            imagefileDiv.firstChild.remove();
+                        }
+                        const img = document.createElement('img');
+                        img.src = data.imagefile;
+                        imagefileDiv.appendChild(img);
+
+                        // GSAP animations
+                        gsap.from(h1, { duration: 0.5, y: -50, opacity: 0 });
+                        gsap.from(p, { duration: 0.5, y: -50, opacity: 0, stagger: 0.2 });
+                        gsap.from('.outcomesbutton', { duration: 0.5, y: -20, opacity: 0, stagger: 0.1 });
+                        gsap.from(img, { duration: 0.5, y: -50, opacity: 0 });
+
+                        // border colours, switch states
+                        switch (jsonFile) {
+                            case 'inte.json':
+                                contentDiv.style.borderColor = '#D77C79';
+                                break;
+                            case 'deve.json':
+                                contentDiv.style.borderColor = '#AAADFF';
+                                break;
+                            case 'prof.json':
+                                contentDiv.style.borderColor = '#f0d84b';
+                                break;
+                            case 'iter.json':
+                                contentDiv.style.borderColor = '#50ef5a';
+                                break;
+                            case 'lead.json':
+                                contentDiv.style.borderColor = '#fa99e1';
+                                break;
+                            default:
+                                contentDiv.style.borderColor = 'black';
+                        }
+                    })
+            });
+        });
+    </script>
+</body>
+</html>
