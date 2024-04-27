@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SoundWave Studio</title>
-    <link rel="stylesheet" href="projects/projects.css">
+    <link rel="stylesheet" href="../projects.css">
 </head>
-<script src="js/gsap.min.js"></script>
+<script src="../../js/gsap.min.js"></script>
 <body>
-    <a href="portfolio.html">
+    <a href="../../portfolio.html">
         <div class="backbutton">
             BACK
         </div>
@@ -45,7 +45,7 @@ buttons.forEach(button => {
     button.addEventListener('click', function() {
         // using the class name to get the json file
         const className = this.className.split(' ')[1];
-        const jsonFile = 'projects/group/' + className + '.json';
+        const jsonFile = className + '.json';
 
         // fetch the JSON file
         fetch(jsonFile)

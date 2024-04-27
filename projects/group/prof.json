@@ -1,0 +1,27 @@
+{
+    "title": "Professional",
+    "bordercolor": "#f0d84b",
+    "imagefile": "",
+    "description": "",
+    "pagecontent": "",
+    "projects": [
+        {
+            "title": "Project 1",
+            "imagefile": "images/project1.jpg",
+            "description": "Soundwave",
+            "projectcontent": "This is the content of the project"
+        },
+        {
+            "title": "Project 2",
+            "imagefile": "images/project2.jpg",
+            "description": "This is a project",
+            "projectcontent": "This is the content of the project"
+        },
+        {
+            "title": "Project 3",
+            "imagefile": "images/project3.jpg",
+            "description": "This is a project",
+            "projectcontent": "This is the content of the project"
+        }
+    ]
+}
