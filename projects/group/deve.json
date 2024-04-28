@@ -22,6 +22,12 @@
             "imagefile": "images/project3.jpg",
             "description": "This is a project",
             "projectcontent": "This is the content of the project"
+        },
+        {
+            "title": "Portfolio website",
+            "imagefile": "images/project4.jpg",
+            "description": "This website itself",
+            "projectcontent": "This is the content of the project"
         }
     ]
 }

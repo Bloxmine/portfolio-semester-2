@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="projects/projects.css">
 </head>
 <script src="js/gsap.min.js"></script>
+<script src="js/marked.js"></script>
 <body>
     <a href="portfolio.html">
         <div class="backbutton">
@@ -105,9 +106,16 @@ buttons.forEach(button => {
                     projectDescription.textContent = project.description;
                     projectDiv.appendChild(projectDescription);
 
-                    const projectContent = document.createElement('p');
-                    projectContent.textContent = project.projectcontent;
-                    projectDiv.appendChild(projectContent);
+                    // Split the projectcontent into paragraphs
+                    const paragraphs = project.projectcontent.split('\n\n');
+
+                    // Create a new <p> element for each paragraph
+                    paragraphs.forEach(paragraph => {
+                        const projectContent = document.createElement('p');
+                        // Use the marked function to parse the Markdown syntax
+                        projectContent.innerHTML = marked(paragraph);
+                        projectDiv.appendChild(projectContent);
+                    });
 
                     contentDiv.appendChild(projectDiv);
                 });
