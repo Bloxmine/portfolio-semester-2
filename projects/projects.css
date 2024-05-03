@@ -65,12 +65,10 @@ body {
     cursor: pointer;
 }
 
-.backbutton {
+.viewbutton {
     background-color: var(--backbutton-color);
-    font-size: 1rem;
-    color: #000000;
-    padding: 10px 20px;
-    border-radius: 50px;
+    padding: 20px 20px;
+    border-radius: 10px;
     z-index: 9999;
     margin: 10px;
     cursor: pointer;
@@ -78,6 +76,14 @@ body {
     top: 20px;
     left: 10px;
     transform: translateY(-50%);
+    background-image: url('expand.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.viewbutton:hover {
+    background-color: #fff0a3;
 }
 
 .outcomesbutton:hover {
@@ -132,7 +138,16 @@ body {
 .imagefile {
     width: 10%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 20px;
+}
+
+.project img {
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.project img:hover {
+    box-shadow: 0 0 10px 5px #ffffff;
 }
 
 @font-face {
