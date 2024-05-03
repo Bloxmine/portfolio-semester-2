@@ -10,12 +10,13 @@
 <script src="js/marked.js"></script>
 <body>
     <a href="portfolio.html">
-        <div class="backbutton">
-            BACK
-        </div>
     </a>
     <div class="container">
-        <div class="column">
+        <div class="left-column">
+            <!-- Left column content goes here -->
+            <div class="imagebox">
+                <div class="imagefile"></div>
+            </div>
         </div>
         <div class="main">
             <div id="buttons"></div>
@@ -26,110 +27,112 @@
                 <div class="outcomesbutton iter">ITERATIVE DESIGN</div>
                 <div class="outcomesbutton lead">LEADERSHIP</div>
             </div>
-        <div class="content">
-            <h1>Learning outcomes, explained.</h1>
-            <p>description</p>
-            <p>content</p>
-        </div>
-        </div>
-        <div class="column">
-            <div class="imagebox">
-                <div class="imagefile"></div>
+            <div class="content">
+                <h1>Learning outcomes, explained.</h1>
+                <p>This is the page </p>
+                <p>content</p>
             </div>
         </div>
+        <div class="right-column">
+            <div class="infoboard"><h1>Title</h1><p>description</p></div>
+        </div>
     </div>
-    <div id="content"></div>
     <script>
-// JSON loader when pressing a certain button
-const buttons = document.querySelectorAll('.outcomesbutton');
-buttons.forEach(button => {
-    button.addEventListener('click', function() {
-        // using the class name to get the json file
-        const className = this.className.split(' ')[1];
-        const jsonFile = 'projects/group/' + className + '.json';
+        // JSON loader when pressing a certain button
+        const buttons = document.querySelectorAll('.outcomesbutton');
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                // using the class name to get the json file
+                const className = this.className.split(' ')[1];
+                const jsonFile = 'projects/group/' + className + '.json';
 
-        // fetch the JSON file
-        fetch(jsonFile)
-            .then(response => {
-                // error checking
-                if (!response.ok) {
-                    throw new Error(`FLAGRANT SYSTEM ERROR!! status: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                const contentDiv = document.querySelector('.content');
-                while (contentDiv.firstChild) {
-                    contentDiv.firstChild.remove();
-                }
+                // fetch the JSON file
+                fetch(jsonFile)
+                    .then(response => {
+                        // error checking
+                        if (!response.ok) {
+                            throw new Error(`FLAGRANT SYSTEM ERROR!! status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        const infoboardH1 = document.querySelector('.infoboard h1');
+                        const infoboardP = document.querySelector('.infoboard p');
+                        const contentDiv = document.querySelector('.content');
+                        while (contentDiv.firstChild) {
+                            contentDiv.firstChild.remove();
+                        }
 
-                const h1 = document.createElement('h1');
-                h1.textContent = data.title;
-                contentDiv.appendChild(h1);
+                        infoboardH1.textContent = data.title;
+                        infoboardP.textContent = data.description;
 
-                const p = document.createElement('p');
-                p.textContent = data.description;
-                contentDiv.appendChild(p);
+                        const h1 = document.createElement('h1');
+                        h1.textContent = data.title;
+                        contentDiv.appendChild(h1);
 
-                const pageContent = document.createElement('p');
-                pageContent.textContent = data.pagecontent;
-                contentDiv.appendChild(pageContent);
+                        const p = document.createElement('p');
+                        p.textContent = data.description;
+                        contentDiv.appendChild(p);
 
-                const imagefileDiv = document.querySelector('.imagefile');
-                while (imagefileDiv.firstChild) {
-                    imagefileDiv.firstChild.remove();
-                }
-                const img = document.createElement('img');
-                img.src = data.imagefile;
-                imagefileDiv.appendChild(img);
+                        const pageContent = document.createElement('p');
+                        pageContent.textContent = data.pagecontent;
+                        contentDiv.appendChild(pageContent);
 
-                // GSAP animations
-                gsap.from(h1, { duration: 0.5, y: -50, opacity: 0 });
-                gsap.from(p, { duration: 0.5, y: -50, opacity: 0, stagger: 0.2 });
-                gsap.from('.outcomesbutton', { duration: 0.5, y: -20, opacity: 0, stagger: 0.1 });
-                gsap.from(img, { duration: 0.5, y: -50, opacity: 0 });
+                        const imagefileDiv = document.querySelector('.imagefile');
+                        while (imagefileDiv.firstChild) {
+                            imagefileDiv.firstChild.remove();
+                        }
+                        const img = document.createElement('img');
+                        img.src = data.imagefile;
+                        imagefileDiv.appendChild(img);
 
-                // create new elements for each project
-                data.projects.forEach(project => {
-                    const projectDiv = document.createElement('div');
-                    projectDiv.className = 'project';
+                        // GSAP animations
+                        gsap.from(h1, { duration: 0.5, y: -50, opacity: 0 });
+                        gsap.from(p, { duration: 0.5, y: -50, opacity: 0, stagger: 0.2 });
+                        gsap.from('.outcomesbutton', { duration: 0.5, y: -20, opacity: 0, stagger: 0.1 });
+                        gsap.from(img, { duration: 0.5, y: -50, opacity: 0 });
 
-                    const projectTitle = document.createElement('h2');
-                    projectTitle.textContent = project.title;
-                    projectDiv.appendChild(projectTitle);
+                        // create new elements for each project
+                        data.projects.forEach(project => {
+                            const projectDiv = document.createElement('div');
+                            projectDiv.className = 'project';
 
-                    const projectImg = document.createElement('img');
-                    projectImg.src = project.imagefile;
-                    projectDiv.appendChild(projectImg);
+                            const projectTitle = document.createElement('h2');
+                            projectTitle.textContent = project.title;
+                            projectDiv.appendChild(projectTitle);
 
-                    const projectDescription = document.createElement('h4');
-                    projectDescription.textContent = project.description;
-                    projectDiv.appendChild(projectDescription);
+                            const projectImg = document.createElement('img');
+                            projectImg.src = project.imagefile;
+                            projectDiv.appendChild(projectImg);
 
-                    // Split the projectcontent into paragraphs
-                    const paragraphs = project.projectcontent.split('\n\n');
+                            const projectDescription = document.createElement('h4');
+                            projectDescription.textContent = project.description;
+                            projectDiv.appendChild(projectDescription);
 
-                    // Create a new <p> element for each paragraph
-                    paragraphs.forEach(paragraph => {
-                        const projectContent = document.createElement('p');
-                        // Use the marked function to parse the Markdown syntax
-                        projectContent.innerHTML = marked(paragraph);
-                        projectDiv.appendChild(projectContent);
-                    });
+                            // Split the projectcontent into paragraphs
+                            const paragraphs = project.projectcontent.split('\n\n');
 
-                    contentDiv.appendChild(projectDiv);
-                });
+                            // Create a new <p> element for each paragraph
+                            paragraphs.forEach(paragraph => {
+                                const projectContent = document.createElement('p');
+                                // Use the marked function to parse the Markdown syntax
+                                projectContent.innerHTML = marked(paragraph);
+                                projectDiv.appendChild(projectContent);
+                            });
 
-                contentDiv.style.borderColor = data.bordercolor;
+                            contentDiv.appendChild(projectDiv);
+                        });
 
-                gsap.from('.project', { duration: 0.5, y: -50, opacity: 0, stagger: 0.2 });
-                gsap.from('.project img', { duration: 0.5, y: -50, opacity: 0, stagger: 0.2 });
-                gsap.from('.project h4', { duration: 0.5, y: -50, opacity: 0, stagger: 0.2 });
-                gsap.from('.project p', { duration: 0.5, y: -50, opacity: 0, stagger: 0.2 });
+                        contentDiv.style.borderColor = data.bordercolor;
 
-            })
-    });
-});
+                        gsap.from('.project', { duration: 0.5, y: -50, opacity: 0, stagger: 0.2 });
+                        gsap.from('.project img', { duration: 0.5, y: -50, opacity: 0, stagger: 0.2 });
+                        gsap.from('.project h4', { duration: 0.5, y: -50, opacity: 0, stagger: 0.2 });
+                        gsap.from('.project p', { duration: 0.5, y: -50, opacity: 0, stagger: 0.2 });
+
+                    })
+            });
+        });
     </script>
 </body>
 </html>

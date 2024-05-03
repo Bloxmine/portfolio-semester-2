@@ -9,7 +9,7 @@
             "title": "Soundwave Studio",
             "imagefile": "images/project1.jpg",
             "description": "Project 1",
-            "projectcontent": "Soundwave Studio: With the Soundwave Studio design process I’ve started with creating digital sketches of initial logo designs, the name and font and colour choice. I continued with a mood board to get a feel of where the design should be moving towards. This is also influenced by feedback I’ve received from our client as well as fellow students. We had our target audience decide on which logo has the best look and feel. Two of them won and we combined them into one, each group member creating a refined version of the logo. Mine was the final chosen logo after a second round of polling. I used this logo to iteratively build the design of the entire brand guide."
+            "projectcontent": "**Design** With the Soundwave Studio design process I’ve started with creating digital sketches of initial logo designs, the name and font and colour choice. I continued with a mood board to get a feel of where the design should be moving towards. This is also influenced by feedback I’ve received from our client as well as fellow students. We had our target audience decide on which logo has the best look and feel. Two of them won and we combined them into one, each group member creating a refined version of the logo. Mine was the final chosen logo after a second round of polling. I used this logo to iteratively build the design of the entire brand guide."
         },
         {
             "title": "Project 2",
@@ -18,8 +18,26 @@
             "projectcontent": "This is the content of the project"
         },
         {
-            "title": "Project 3",
+            "title": "Personal Portfolio",
             "imagefile": "images/project3.jpg",
+            "description": "This is a project",
+            "projectcontent": "My portfolio has seen many different iterations. Starting from learning how to use Javascript better and making a few experiments for my site design, then receiving feedback and starting again but this time instead of beginning with programming an developing the design from there, I collected inspiration."
+        },
+        {
+            "title": "Project 4",
+            "imagefile": "images/project4.jpg",
+            "description": "This is a project",
+            "projectcontent": "This is the content of the project"
+        },
+        {
+            "title": "Project 5",
+            "imagefile": "images/project5.jpg",
+            "description": "This is a project",
+            "projectcontent": "This is the content of the project"
+        },
+        {
+            "title": "Project 6",
+            "imagefile": "images/project6.jpg",
             "description": "This is a project",
             "projectcontent": "This is the content of the project"
         }

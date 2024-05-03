@@ -2,7 +2,7 @@
     "title": "Development",
     "bordercolor": "#AAADFF",
     "imagefile": "",
-    "description": "",
+    "description": "These are some of the projects I have worked on regarding development",
     "pagecontent": "",
     "projects": [
         {
@@ -18,15 +18,15 @@
             "projectcontent": "This is the content of the project"
         },
         {
-            "title": "Project 3",
-            "imagefile": "images/project3.jpg",
-            "description": "This is a project",
-            "projectcontent": "This is the content of the project"
-        },
-        {
             "title": "Portfolio website",
             "imagefile": "images/project4.jpg",
             "description": "This website itself",
+            "projectcontent": "This is the content of the project"
+        },
+        {
+            "title": "Subshootica",
+            "imagefile": "images/project3.jpg",
+            "description": "This is a project",
             "projectcontent": "This is the content of the project"
         }
     ]

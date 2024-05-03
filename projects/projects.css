@@ -15,17 +15,28 @@ body {
     background-color: var(--background-color);
     font-size: 1.5rem;
 }
-
+/* change to grid instead? */
 .container {
     display: flex;
 }
 
-.column {
+.left-column {
     flex: 1;
 }
 
 .main {
-    flex: 3;
+    flex: 5;
+}
+
+.right-column {
+    flex: 2;
+}
+
+.infoboard {
+    margin: 20px;
+    padding: 20px;
+    border: #000000 5px solid;
+    border-radius: 20px;
 }
 
 .learningoutcomes {
@@ -115,8 +126,6 @@ body {
 .imagebox {
     padding: 10px;
     border-radius: 10px;
-    width: 300px;
-    height: 300px;
     margin-top: 40px;
 }
 
