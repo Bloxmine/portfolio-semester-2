@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandguide</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+        img {
+            width: 1200;
+            height: 800px;
+            max-width: 90%;
+            max-height: 90%;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        button {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2em;
+        }
+        #prev {
+            left: 10px;
+        }
+        #next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <img id="display" src="image1.jpg">
+    <button id="prev">←</button>
+    <button id="next">→</button>
+    <script>
+        let images = ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg", "image5.jpg", "image6.jpg", "image7.jpg", "image8.jpg", "image9.jpg", "image10.jpg"]; // Add your images here
+        let index = 0;
+
+        document.getElementById("next").addEventListener("click", function() {
+            index = (index + 1) % images.length;
+            document.getElementById("display").src = images[index];
+        });
+
+        document.getElementById("prev").addEventListener("click", function() {
+            index = (index - 1 + images.length) % images.length;
+            document.getElementById("display").src = images[index];
+        });
+    </script>
+</body>
+</html>

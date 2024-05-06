@@ -37,6 +37,7 @@ body {
     padding: 20px;
     border: #000000 5px solid;
     border-radius: 20px;
+    position: fixed;
 }
 
 .learningoutcomes {
