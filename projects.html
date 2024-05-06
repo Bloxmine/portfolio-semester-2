@@ -47,7 +47,7 @@
                 const className = this.className.split(' ')[1];
                 const jsonFile = 'projects/group/' + className + '.json';
 
-                // changign the URL
+                // changing the URL
                 const identifier = this.className.split(' ')[1];
                 const url = new URL(window.location.href);
                 url.searchParams.delete('id');
@@ -143,6 +143,17 @@
                     })
             });
         });
+
+        // Load JSON based on URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const identifier = urlParams.get('id');
+        if (identifier) {
+            const button = document.querySelector(`.outcomesbutton.${identifier}`);
+            if (button) {
+                button.click();
+            }
+        }
+    </script>
     </script>
 </body>
 </html>

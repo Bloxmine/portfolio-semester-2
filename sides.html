@@ -16,7 +16,7 @@
                     <li><a id="home" href="#">HOME</a></li>
                     <li><a id="about" href="#">ABOUT</a></li>
                     <li><a id="projects" href="#">PROJECTS</a></li>
-                    <li><a id="outcomes" href="#">OUTCOMES</a></li>
+                    <li><a id="outcomes" href="#" style="color: #FFD915">OUTCOMES</a></li>
                 </ul>
             </div>
         </div>
@@ -26,24 +26,19 @@
     </div>
     <script src="dist/main.js"></script>
     <script>
-var links = ['home', 'about', 'projects', 'outcomes'];
+        // I SHOULD NOT BE USING IFRAMES
+    let links = ['home', 'about', 'projects', 'outcomes'];
 
-links.forEach(function(id) {
-    document.getElementById(id).addEventListener('click', function(event) {
-        event.preventDefault();
-
-        // Change the iframe content
-        parent.document.getElementById('content-iframe').src = id + '.html';
-
-        // Remove the active-link class from all links
-        links.forEach(function(id) {
-            document.getElementById(id).classList.remove('active-link');
+    links.forEach(function(id) {
+        document.getElementById(id).addEventListener('click', function(event) {
+            event.preventDefault();
+            parent.document.getElementById('content-iframe').src = id + '.html';
+            links.forEach(function(id) {
+                document.getElementById(id).classList.remove('active-link');
+            });
+            this.classList.add('active-link');
         });
-
-        // Add the active-link class to the clicked link
-        this.classList.add('active-link');
     });
-});
-</script>
-</body>
-</html>
+    </script>
+    </body>
+    </html>

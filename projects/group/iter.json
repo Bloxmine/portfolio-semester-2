@@ -15,13 +15,14 @@
         {
             "title": "Fontys OVP",
             "imagefile": "images/project2.jpg",
-            "description": "This is a project",
+            "description": "Project 2",
             "projectcontent": "This is the content of the project"
         },
         {
             "title": "Personal Portfolio",
             "imagefile": "images/project3.jpg",
-            "description": "This is a project",
+            "imagelink": "projects/group/soundwave/portfolio/portfolio.html",
+            "description": "",
             "projectcontent": "My portfolio has seen many different iterations. Starting from learning how to use Javascript better and making a few experiments for my site design, then receiving feedback and starting again but this time instead of beginning with programming an developing the design from there, I collected inspiration."
         },
         {
