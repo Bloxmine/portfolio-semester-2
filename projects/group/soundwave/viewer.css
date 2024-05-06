@@ -1,0 +1,73 @@
+:root {
+    --font-primary: 'AtramentWeb', Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+img {
+    width: 1200;
+    height: 800px;
+    max-width: 80%;
+    max-height: 80%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+button {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    background-color: #FFD915;
+    border: none;
+    border-radius: 25%;
+}
+button:hover {
+    background-color: #fff0a3;
+    cursor: pointer;
+}
+#backbutton {
+    background-color: #FFD915;
+    font-size: 1rem;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 50px;
+    z-index: 9999;
+    margin: 10px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    transform: translateY(-50%);
+}
+#backbutton:hover {
+    background-color: #fff0a3;
+    cursor: pointer;
+}
+#prev {
+    left: 10px;
+}
+#next {
+    right: 10px;
+}
+
+#caption {
+    position: fixed;
+    left: 10px;
+    bottom: 0px;
+    width: 90%; 
+    text-align: left;
+    color: #ffffff;
+    font-size: 1.3em;
+}
+@font-face {
+    font-family: 'AtramentWeb';
+    src: url(../../../../fonts/AtramentWeb.woff) format('woff');
+    font-style: sans-serif;
+}

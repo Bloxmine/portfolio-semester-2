@@ -2,24 +2,31 @@
     "title": "Personal Leadership",
     "bordercolor": "#fa99e1",
     "imagefile": "",
-    "description": "",
+    "description": "I definitely feel like I’ve grown a lot this semester, I’ve asked for feedback even more than before and learned a lot of things about Media which I’ve never heard of before. I enjoy talking with others, teachers and students alike, about interesting things in the Media landscape, and this inspires me to create more interesting things.",
     "pagecontent": "",
     "projects": [
         {
-            "title": "Project 1",
+            "title": "Soundwave Studio",
             "imagefile": "images/project1.jpg",
             "description": "Soundwave",
             "projectcontent": "This is the content of the project"
         },
         {
-            "title": "Project 2",
+            "title": "OVP",
             "imagefile": "images/project2.jpg",
             "description": "This is a project",
             "projectcontent": "This is the content of the project"
         },
         {
-            "title": "Project 3",
+            "title": "Portfolio",
             "imagefile": "images/project3.jpg",
+            "imagelink": "projects/group/soundwave/feedback/feedback.html",
+            "description": "Feedback about my portfolio",
+            "projectcontent": "I often ask for feedback about my portfolio, and I actively discuss feedback I’ve received with many different teachers. This allows me to get different point of view about how my development is moving along. \n\nThe feedback I receive helps me identify my own core values by hearing how others see my work instead of thinking something is ‘finished’ and not looking at it again.  "
+        },
+        {
+            "title": "Personal Leadership",
+            "imagefile": "images/project4.jpg",
             "description": "This is a project",
             "projectcontent": "This is the content of the project"
         }

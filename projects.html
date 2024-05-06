@@ -102,9 +102,14 @@
                             projectTitle.textContent = project.title;
                             projectDiv.appendChild(projectTitle);
 
+                            const projectLink = document.createElement('a');
+                            projectLink.href = project.imagelink;
+
                             const projectImg = document.createElement('img');
                             projectImg.src = `images/${className}/${project.imagefile}`;
-                            projectDiv.appendChild(projectImg);
+                            projectLink.appendChild(projectImg);
+
+                            projectDiv.appendChild(projectLink);
 
                             const projectDescription = document.createElement('h4');
                             projectDescription.textContent = project.description;

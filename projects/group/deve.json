@@ -6,26 +6,37 @@
     "pagecontent": "",
     "projects": [
         {
-            "title": "Project 1",
-            "imagefile": "images/project1.jpg",
-            "description": "Soundwave",
-            "projectcontent": "This is the content of the project"
+            "title": "Portfolio website",
+            "imagefile": "images/project3.jpg",
+            "imagelink": "projects/group/soundwave/brandguide/brandguide.html",
+            "description": "This website itself",
+            "projectcontent": "_Version control_: From the beginning I’ve found it important to keep a Github repo where changes are kept and so I can always have a backup when something breaks. I keep this regularly updated. \n\n_Development_: My initial portfolio design originated from learning and playing around with Javascript, challenging myself to make interesting concepts."
         },
         {
-            "title": "Project 2",
-            "imagefile": "images/project2.jpg",
+            "title": "Subshootica",
+            "imagefile": "images/project4.jpg",
+            "imagelink": "projects/group/soundwave/brandguide/brandguide.html",
             "description": "This is a project",
             "projectcontent": "This is the content of the project"
         },
         {
-            "title": "Portfolio website",
-            "imagefile": "images/project4.jpg",
-            "description": "This website itself",
+            "title": "Three.js challenges",
+            "imagefile": "images/project2.jpg",
+            "imagelink": "projects/group/soundwave/brandguide/brandguide.html",
+            "description": "This is a project",
             "projectcontent": "This is the content of the project"
         },
         {
-            "title": "Subshootica",
-            "imagefile": "images/project3.jpg",
+            "title": "OVP",
+            "imagefile": "images/project1.jpg",
+            "imagelink": "projects/group/soundwave/brandguide/brandguide.html",
+            "description": "This is a project",
+            "projectcontent": "This is the content of the project"
+        },
+        {
+            "title": "First week projects",
+            "imagefile": "images/project5.jpg",
+            "imagelink": "projects/group/soundwave/brandguide/brandguide.html",
             "description": "This is a project",
             "projectcontent": "This is the content of the project"
         }
