@@ -47,6 +47,13 @@
                 const className = this.className.split(' ')[1];
                 const jsonFile = 'projects/group/' + className + '.json';
 
+                // changign the URL
+                const identifier = this.className.split(' ')[1];
+                const url = new URL(window.location.href);
+                url.searchParams.delete('id');
+                url.searchParams.append('id', identifier);
+                window.history.pushState({path: url.toString()}, '', url.toString());
+
                 // fetch the JSON file
                 fetch(jsonFile)
                     .then(response => {
