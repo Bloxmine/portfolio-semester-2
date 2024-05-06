@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personas</title>
+    <link rel="stylesheet" href="../viewer.css">
+</head>
+<body>
+    <a href="../../../../projects.html?id=inte">
+        <div id="backbutton">BACK</div>
+    </a>
+    <img id="display" src="image1.jpg">
+    <p id="caption">These are the initial iterations I've made of our project.</p>
+    <button id="prev">←</button>
+    <button id="next">→</button>
+    <script>
+        let images = [
+            {src: "image1.jpg", caption: ""},
+            {src: "image2.jpg", caption: ""},
+        ];
+        let index = 0;
+
+        document.getElementById("next").addEventListener("click", function() {
+            index = (index + 1) % images.length;
+            document.getElementById("display").src = images[index].src;
+            document.getElementById("caption").innerText = images[index].caption;
+        });
+
+        document.getElementById("prev").addEventListener("click", function() {
+            index = (index - 1 + images.length) % images.length;
+            document.getElementById("display").src = images[index].src;
+            document.getElementById("caption").innerText = images[index].caption;
+        });
+    </script>
+</body>
+</html>

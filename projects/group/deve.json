@@ -10,35 +10,35 @@
             "imagefile": "images/project3.jpg",
             "imagelink": "projects/group/soundwave/brandguide/brandguide.html",
             "description": "This website itself",
-            "projectcontent": "_Version control_: From the beginning I’ve found it important to keep a Github repo where changes are kept and so I can always have a backup when something breaks. I keep this regularly updated. \n\n_Development_: My initial portfolio design originated from learning and playing around with Javascript, challenging myself to make interesting concepts."
+            "projectcontent": "_Version control_: From the beginning I’ve found it important to keep a [Github repo](https://github.com/Bloxmine/portfolio-semester-2https://github.com/Bloxmine/portfolio-semester-2) where changes are kept and so I can always have a backup when something breaks. I keep this regularly updated. \n\n_Development_: My initial portfolio design originated from learning and playing around with Javascript, challenging myself to make interesting concepts. After I've received feedback to take a few steps back and think about how my website should look and how it should function. Inspired by Star Trek's LCARS interface, I've created a design that to me is both visually appealing and functional. \n\n_JSON loader_: An important part for ease of use in developing my website is making a JSON based loader. Instead of having to manually add projects to the website, I can now just add a new project to the JSON file and it will automatically be added to the website, including the appropriate images and links. The loader also gives the URL an identifier so that the page can be bookmarked or remembered without having to reload the JSON, as it isn't loading in a seperate HTML page.\n\n_GSAP and animation_: I had no experience with GSAP but I've wanted to make my site animated for a long time, which you can see the result of on this same page.\n\n_Easy to understand code_: Something which is important to me is that my code is easy to understand to both me and other people, that's why I always add comments to my code and use 1TBS indentation."
         },
         {
             "title": "Subshootica",
             "imagefile": "images/project4.jpg",
             "imagelink": "projects/group/soundwave/brandguide/brandguide.html",
-            "description": "This is a project",
-            "projectcontent": "This is the content of the project"
+            "description": "Development project.",
+            "projectcontent": "For Subshootica I have used Javascript to generate enemies, missiles and the player. I have also used Javascript to make the player move and shoot. I have used CSS to style the game and animate the submarine. I have used HTML to create the structure of the game. I have used Github to keep track of my changes and to have a backup of my project. There's a score system and a health system in the game"
         },
         {
             "title": "Three.js challenges",
             "imagefile": "images/project2.jpg",
-            "imagelink": "projects/group/soundwave/brandguide/brandguide.html",
-            "description": "This is a project",
-            "projectcontent": "This is the content of the project"
+            "imagelink": "threejs/spitfire/index.html",
+            "description": "Spitfire",
+            "projectcontent": "I had previously little experience with Three.js, but I’ve been figuring out how it functions and how I can integrate it into my projects. The spinning earth on my portfolio site was created using Three.js. I have also made a Spitfire model and animated it as an extra challenge for development class."
         },
         {
             "title": "OVP",
             "imagefile": "images/project1.jpg",
             "imagelink": "projects/group/soundwave/brandguide/brandguide.html",
-            "description": "This is a project",
-            "projectcontent": "This is the content of the project"
+            "description": "Group project 2",
+            "projectcontent": "I am working on the easter eggs in the OVP site. (T.B.D.)"
         },
         {
             "title": "First week projects",
             "imagefile": "images/project5.jpg",
-            "imagelink": "projects/group/soundwave/brandguide/brandguide.html",
-            "description": "This is a project",
-            "projectcontent": "This is the content of the project"
+            "imagelink": "https://hein.neocities.org/googlesux",
+            "description": "#googlesux",
+            "projectcontent": "During the first week we had a challenge regarding good and bad user experience: we had to create a site that normally has good UX and make it bad, and vice versa. I chose to turn Google into a terrible experience full of effects, javascript based pop ups and excessive animation."
         }
     ]
 }

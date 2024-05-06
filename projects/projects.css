@@ -151,6 +151,17 @@ body {
     box-shadow: 0 0 10px 5px #ffffff;
 }
 
+p a {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px #ffffff;
+}
+
+p a:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px #ffffff;
+}
+
+
 @font-face {
     font-family: 'AtramentWeb';
     src: url(../fonts/AtramentWeb.woff) format('woff');
