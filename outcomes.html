@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a very responsive website</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #000000;
+        }
+        h1 {
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgb(0, 0, 0);
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .box {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+        }
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+        .sortable-ghost {
+            opacity: 0;
+        }
+        header {
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1:hover {
+            cursor: pointer;
+            text-shadow: 0 0 10px rgb(255, 255, 255);
+        }
+        footer {
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>henlo u hav found teh ester eg</h1>
+    </header>
+    <div class="container">
+        <div class="box">
+            <h1>Box 1</h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <h1>Box 2</h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <h1>Box 3</h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <h1>Box 4</h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <h1>Box 5</h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <h1>Box 6</h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <h1>Box 7</h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <h1>Box 8</h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <h1>Box 9</h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <h1>Box 10</h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <h1>Box 11</h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <h1>Box 12</h1>
+            <p></p>
+        </div>
+    </div>
+    <footer>
+        <p>made by heind_</p>
+    </footer>
+</body>
+<script>
+    // randomly colored boxes
+    const boxes = document.querySelectorAll('.box');
+    boxes.forEach(box => {
+        const color = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+        box.style.backgroundColor = color;
+        box.style.boxShadow = `0 0 20px ${color}`;
+    });
+
+    //boxes sortable
+    new Sortable(document.querySelector('.container'), {
+        animation: 150,
+        ghostClass: 'sortable-ghost'
+    });
+    // array with 20 random household objects
+    const objects = [
+        'chair', 'table', 'lamp', 'sofa', 'bed', 'bookshelf', 'wardrobe', 'mirror', 'rug', 'curtains', 'cushion', 'blanket', 'clock', 'vase', 'plant', 'picture', 'candle', 'basket', 'tray', 'bowl'
+    ];
+    //array with 20 random fruits
+    const fruits = [
+        'apple', 'banana', 'orange', 'pear', 'strawberry', 'grape', 'kiwi', 'pineapple', 'watermelon', 'melon', 'peach', 'plum', 'cherry', 'raspberry', 'blueberry', 'blackberry', 'mango', 'papaya', 'avocado', 'coconut'
+    ];
+    //array with 20 random animals
+    const animals = [
+        'dog', 'cat', 'rabbit', 'hamster', 'parrot', 'goldfish', 'turtle', 'guinea pig', 'chinchilla', 'ferret', 'hedgehog', 'chameleon', 'gecko', 'snake', 'tarantula', 'scorpion', 'hermit crab', 'axolotl', 'sugar glider', 'squirrel'
+    ];
+    //array with 20 random elements
+    const elements = [
+        'fire', 'water', 'earth', 'air', 'light', 'darkness', 'thunder', 'ice', 'metal', 'wood', 'sand', 'mud', 'smoke', 'steam', 'lava', 'magma', 'cloud', 'rain', 'snow', 'hail'
+    ];
+    let currentArray = objects;
+    // click on the header to change the array
+    document.querySelector('header').addEventListener('click', () => {
+        if (currentArray === objects) {
+            currentArray = fruits;
+        } else if (currentArray === fruits) {
+            currentArray = animals;
+        } else if (currentArray === animals) {
+            currentArray = elements;
+        } else {
+            currentArray = objects;
+        }
+        boxes.forEach(box => {
+            const object = currentArray[Math.floor(Math.random()*currentArray.length)];
+            box.querySelector('h1').textContent = `${object}`;
+        });
+    });
+    // randomly assign an object to each box
+    boxes.forEach(box => {
+        const object = currentArray[Math.floor(Math.random()*objects.length)];
+        box.querySelector('h1').textContent = `${object}`;
+    });
+</script>
+</html>

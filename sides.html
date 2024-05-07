@@ -13,10 +13,10 @@
         <div class="top">
             <div class="menu">
                 <ul>
-                    <li><a id="home" href="#">HOME</a></li>
-                    <li><a id="about" href="#">ABOUT</a></li>
-                    <li><a id="projects" href="#">PROJECTS</a></li>
-                    <li><a id="outcomes" href="#" style="color: #FFD915">OUTCOMES</a></li>
+                    <li><a id="home" href="">HOME</a></li>
+                    <li><a id="about" href="">ABOUT</a></li>
+                    <li><a id="projects" href="">PROJECTS</a></li>
+                    <li><a id="outcomes" href="" style="color: #FFD915">OUTCOMES</a></li>
                 </ul>
             </div>
         </div>
@@ -27,18 +27,19 @@
     <script src="dist/main.js"></script>
     <script>
         // I SHOULD NOT BE USING IFRAMES
-    let links = ['home', 'about', 'projects', 'outcomes'];
+        let links = ['home', 'about', 'projects', 'outcomes'];
 
-    links.forEach(function(id) {
-        document.getElementById(id).addEventListener('click', function(event) {
-            event.preventDefault();
-            parent.document.getElementById('content-iframe').src = id + '.html';
-            links.forEach(function(id) {
-                document.getElementById(id).classList.remove('active-link');
+        links.forEach(function(id) {
+            document.getElementById(id).addEventListener('click', function(event) {
+                event.preventDefault();
+                parent.document.getElementById('content-iframe').src = id + '.html';
+                links.forEach(function(id) {
+                    document.getElementById(id).classList.remove('active-link');
+                });
+                this.classList.add('active-link');
+                window.history.pushState({}, '', '?id=' + id);
             });
-            this.classList.add('active-link');
         });
-    });
     </script>
     </body>
     </html>
