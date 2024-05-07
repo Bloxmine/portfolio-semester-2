@@ -10,8 +10,7 @@
 <script src="js/marked.js"></script>
 <body>
     <a href="projects.html" target="_top">
-        <div class="viewbutton" title="Expand view">
-        </div>
+        <div class="viewbutton" title="Expand view"></div>
     </a>
     <div class="container">
         <div class="left-column">
@@ -30,7 +29,7 @@
             </div>
             <div class="content">
                 <h1>Learning outcomes, explained.</h1>
-                <p>On this page, the learning outcomes are represented by colourcoded buttons. Click on on of these buttons and you get to see explanations of how I implemented those outcomes into my projects.</p>
+                <p>On this page, the learning outcomes are represented by colourcoded buttons. Click on on of these buttons and you get to see explanations of how I implemented those outcomes into my projects.</p>               <img src="images/likeso.jpg" class="howtoimage">
                 <p>On the top left you'll see an 'expand view' button, which makes reading large amounts of text easier. Clicking on images reveals more content.</p>
             </div>
         </div>
@@ -152,6 +151,23 @@
             if (button) {
                 button.click();
             }
+        }
+        window.onload = function() {
+            const viewButton = document.querySelector('.viewbutton');
+            if (window.self === window.top) {
+                viewButton.classList.add('shrinkbutton');
+                viewButton.classList.remove('viewbutton');
+            }
+
+            viewButton.addEventListener('click', function(event) {
+                if (window.self === window.top) {
+                    event.preventDefault();
+                    window.history.back();
+                } else {
+                    viewButton.setAttribute('href', 'projects.html');
+                    viewButton.setAttribute('target', '_top');
+                }
+            });
         }
     </script>
     </script>

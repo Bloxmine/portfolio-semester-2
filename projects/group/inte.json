@@ -9,14 +9,14 @@
             "title": "Soundwave Studio",
             "imagefile": "images/project1.jpg",
             "imagelink": "projects/group/soundwave/brandguide/brandguide.html",
-            "description": "Project 1",
+            "description": "Group project 1",
             "projectcontent": "For Soundwave Studio I have done research on the current trends in logo design and how radio stations or audio studios often have their logos designed. I’ve also made proof of concepts for the brandguide. And the entire brandguide itself \n\n **Click on the image to see the brandguide**"
         },
         {
             "title": "Fontys OVP",
             "imagefile": "images/project2.jpg",
             "imagelink": "projects/group/soundwave/personas/personas.html",
-            "description": "Project 2",
+            "description": "Group project 2",
             "projectcontent": "**Personas:** Based on preliminary research I have developed two different personas that fit with the goal of our project. These two personas differ from each other in terms of age, background, and goals. \n\n **Click on the image to see the personas**"
         },
         {
@@ -24,7 +24,7 @@
             "imagefile": "images/project3.jpg",
             "imagelink": "subshootica.html",
             "description": "Development challenge",
-            "projectcontent": "Subshootica is a clickbable prototype in game form. Originally made from a challenge during development class, it has grown into a fully functioning game. \n\n_User testing_: My game received the most user testing of any project I’ve made in the second semester. And I’ve been refining my game based on testing and feedback received by students and teachers. Including observing how people play and experience the gameplay loop. \n\nI have made adjustments and retested my game often and iterated on it thanks to the feedback I’ve received."
+            "projectcontent": "Subshootica is a clickbable prototype in game form. Originally made from a challenge during development class, it has grown into a fully functioning game. \n\n_User testing_: My game received the most user testing of any project I’ve made in the second semester. And I’ve been refining my game based on testing and feedback received by students and teachers. Including observing how people play and experience the gameplay loop. \n\nI have made adjustments and retested my game often and iterated on it thanks to the [feedback I’ve received.](feedback.html) \n\n **Click on the image to play the game**"
         }
     ]
 }
