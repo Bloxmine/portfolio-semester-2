@@ -5,15 +5,24 @@ Welcome to my portfolio! This repository showcases my projects and skills develo
 
 ## Features
 
-JSON loader system built from scratch, loads in projects easily, including images and links.
+1. JSON loader system built from scratch, loads in projects easily, including images and links.
+2. Projects and buttons loaded in and able to be dynamically updated.
 
 ## Set up
 
 Clone the repo and open _index.html_ in your web browser of choice.
 
 ## What this project consists of
+The JSON loader is the heart of my website. (W.I.P)
 
-The JSON loader is thee heart of my website. (W.I.P)
+## Technologies used
+
+- HTML
+- CSS
+- JS
+- GSAP (GreenShock Animation Platform)
+- Marked.js
+- Three.js (inc. OrbitalControls)
 
 ## Notes
 
