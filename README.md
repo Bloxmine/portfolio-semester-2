@@ -9,7 +9,11 @@ JSON loader system built from scratch, loads in projects easily, including image
 
 ## Set up
 
-Pull the project and open _index.html_ in your web browser of choice.
+Clone the repo and open _index.html_ in your web browser of choice.
+
+## What this project consists of
+
+The JSON loader is thee heart of my website. (W.I.P)
 
 ## Notes
 
