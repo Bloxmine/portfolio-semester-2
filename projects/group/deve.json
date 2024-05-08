@@ -17,7 +17,7 @@
             "imagefile": "images/project4.jpg",
             "imagelink": "subshootica.html",
             "description": "Development project.",
-            "projectcontent": "For Subshootica I have used Javascript to generate enemies, missiles and the player. I have also used Javascript to make the player move and shoot. I have used CSS to style the game and animate the submarine. I have used HTML to create the structure of the game. I have used Github to keep track of my changes and to have a backup of my project. There's a score system and a health system in the game"
+            "projectcontent": "For Subshootica I have used Javascript to generate enemies, missiles and the player. I have also used Javascript to make the player move and shoot. I have used CSS to style the game and animate the submarine. I have used HTML to create the structure of the game. I have used Github to keep track of my changes and to have a backup of my project. There's a score system and a health system in the game which uses Javascript functions to keep track of gameplay statistics."
         },
         {
             "title": "Three.js challenges",

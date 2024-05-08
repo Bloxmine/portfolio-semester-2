@@ -24,7 +24,7 @@
             "imagefile": "images/project3.jpg",
             "imagelink": "subshootica.html",
             "description": "Development challenge",
-            "projectcontent": "Subshootica is a clickbable prototype in game form. Originally made from a challenge during development class, it has grown into a fully functioning game. \n\n_User testing_: My game received the most user testing of any project I’ve made in the second semester. And I’ve been refining my game based on testing and feedback received by students and teachers. Including observing how people play and experience the gameplay loop. \n\nI have made adjustments and retested my game often and iterated on it thanks to the [feedback I’ve received.](feedback.html) \n\n **Click on the image to play the game**"
+            "projectcontent": "Subshootica is a clickbable prototype in game form. Originally made from a challenge during development class, it has grown into a fully functioning game. \n\n_User testing_: My game received the most user testing of any project I’ve made in the second semester. And I’ve been refining my game based on testing and feedback received by students and teachers. Including observing how people play and experience the gameplay loop. \n\nI have made adjustments and retested my game often and iterated on it thanks to the [feedback I’ve received.](projects/group/soundwave/feedback/feedback.html) \n\n **Click on the image to play the game**"
         }
     ]
 }
