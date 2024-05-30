@@ -7,6 +7,19 @@
     --LCARS-button-primary: #AAADFF;
     --LCARS-button-secondary: #D77C79;
     --backbutton-color: #FFD915;
+    --overlay-gradient: linear-gradient(to bottom, rgba(0,0,0,0) 90%, rgba(0,0,0,1) 100%);
+}
+
+.lightmode {
+    --background-color: #ffffff;
+    --text-color-primary: #000000;
+    --text-color-secondary: #000000;
+    --text-color-active: #000000;
+    --font-primary: 'AtramentWeb', Arial, Helvetica, sans-serif;
+    --LCARS-button-primary: #AAADFF;
+    --LCARS-button-secondary: #D77C79;
+    --backbutton-color: #FFD915;
+    --overlay-gradient: linear-gradient(to bottom, rgba(255,255,255,0) 90%, rgba(255,255,255,1) 100%);
 }
 
 body {
@@ -21,13 +34,13 @@ body {
 }
 
 #overlay {
-    position: fixed; /* Fixed/sticky position */
-    top: 0; /* Place the button at the top of the page */
-    left: 0; /* Place the button at the left of the page */
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     z-index: 9999;
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 90%, rgba(0,0,0,1) 100%);
+    background: var(--overlay-gradient);
     pointer-events: none; 
 }
 
@@ -117,6 +130,31 @@ body {
 
 .viewbutton:hover {
     background-color: #fff0a3;
+}
+
+.toggledarkmode {
+    background-color: var(--backbutton-color);
+    padding: 20px 20px;
+    border-radius: 10px;
+    z-index: 9999;
+    margin: 10px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 60px;
+    transform: translateY(-50%);
+    background-image: url('sun.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.toggledarkmode:hover {
+    background-color: #fff0a3;
+}
+
+body.lightmode .toggledarkmode {
+    background-image: url('moon.png');
 }
 
 .outcomesbutton:hover {

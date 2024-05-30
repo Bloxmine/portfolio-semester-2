@@ -12,6 +12,7 @@
     <div id="overlay"></div>
     <a href="projects.html" target="_top">
         <div class="viewbutton" title="Expand view"></div>
+        <div class="toggledarkmode" title="Toggle dark mode"></div>
     </a>
     <div class="container">
         <div class="left-column">
@@ -154,22 +155,49 @@
             }
         }
         window.onload = function() {
-            const viewButton = document.querySelector('.viewbutton');
-            if (window.self === window.top) {
-                viewButton.classList.add('shrinkbutton');
-                viewButton.classList.remove('viewbutton');
-            }
+    const viewButton = document.querySelector('.viewbutton');
+    const toggleDarkMode = document.querySelector('.toggledarkmode');
 
-            viewButton.addEventListener('click', function(event) {
-                if (window.self === window.top) {
-                    event.preventDefault();
-                    window.history.back();
-                } else {
-                    viewButton.setAttribute('href', 'projects.html');
-                    viewButton.setAttribute('target', '_top');
-                }
-            });
+    // Initially hide the toggleDarkMode button
+    toggleDarkMode.style.display = 'none';
+
+    if (window.self === window.top) {
+        viewButton.classList.add('shrinkbutton');
+        viewButton.classList.remove('viewbutton');
+
+        // Show the toggleDarkMode button when shrinkbutton is present
+        toggleDarkMode.style.display = 'block';
+    }
+
+    viewButton.addEventListener('click', function(event) {
+        if (window.self === window.top) {
+            event.preventDefault();
+            window.history.back();
+        } else {
+            viewButton.setAttribute('href', 'projects.html');
+            viewButton.setAttribute('target', '_top');
         }
+    });
+
+    // Check for saved theme preference in the cookie
+    let theme = document.cookie.split('; ').find(row => row.startsWith('theme='));
+    if (theme) {
+        theme = theme.split('=')[1];
+        document.body.classList.add(theme);
+    }
+
+    toggleDarkMode.addEventListener('click', function() {
+        document.body.classList.toggle('lightmode');
+        document.body.classList.toggle('darkmode');
+
+        // save theme preference in a cookie
+        if (document.body.classList.contains('lightmode')) {
+            document.cookie = "theme=lightmode; path=/";
+        } else {
+            document.cookie = "theme=darkmode; path=/";
+        }
+    });
+}
     </script>
     </script>
 </body>
