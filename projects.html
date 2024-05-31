@@ -12,7 +12,7 @@
     <div id="overlay"></div>
     <a href="projects.html" target="_top">
         <div class="viewbutton" title="Expand view"></div>
-        <div class="toggledarkmode" title="Toggle dark mode"></div>
+        <div class="toggledarkmode" title="Toggle view"></div>
     </a>
     <div class="container">
         <div class="left-column">
@@ -25,8 +25,8 @@
             <div class="learningoutcomes">
                 <div class="outcomesbutton inte">INTERACTIVE</div>
                 <div class="outcomesbutton deve">DEVELOPMENT</div>
-                <div class="outcomesbutton prof">PROFESSIONAL</div>
                 <div class="outcomesbutton iter">ITERATIVE</div>
+                <div class="outcomesbutton prof">PROFESSIONAL</div>
                 <div class="outcomesbutton lead">LEADERSHIP</div>
             </div>
             <div class="content">
@@ -136,10 +136,10 @@
 
                         contentDiv.style.borderColor = data.bordercolor;
 
-                        gsap.from('.project', { duration: 0.5, y: -50, opacity: 0, stagger: 0.2 });
-                        gsap.from('.project img', { duration: 0.5, y: -50, opacity: 0, stagger: 0.2 });
-                        gsap.from('.project h4', { duration: 0.5, y: -50, opacity: 0, stagger: 0.2 });
-                        gsap.from('.project p', { duration: 0.5, y: -50, opacity: 0, stagger: 0.2 });
+                        gsap.from('.project', { duration: 0.2, y: -50, opacity: 0, stagger: 0.2 });
+                        gsap.from('.project img', { duration: 0.2, y: -50, opacity: 0, stagger: 0.2 });
+                        gsap.from('.project h4', { duration: 0.2, y: -50, opacity: 0, stagger: 0.2 });
+                        gsap.from('.project p', { duration: 0.2, y: -50, opacity: 0, stagger: 0.2 });
 
                     })
             });
