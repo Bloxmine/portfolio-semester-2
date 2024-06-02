@@ -86,10 +86,9 @@ buttons.forEach(button => {
                         projectContent.innerHTML = marked(paragraph);
                         projectDiv.appendChild(projectContent);
                     });
-
                     contentDiv.appendChild(projectDiv);
                 });
-
+                // change the border color
                 contentDiv.style.borderColor = data.bordercolor;
 
                 // GSAP animations
@@ -119,14 +118,14 @@ window.onload = function() {
 const viewButton = document.querySelector('.viewbutton');
 const toggleDarkMode = document.querySelector('.toggledarkmode');
 
-// Initially hide the toggleDarkMode button
+// initially hide the toggleDarkMode button
 toggleDarkMode.style.display = 'none';
 
 if (window.self === window.top) {
     viewButton.classList.add('shrinkbutton');
     viewButton.classList.remove('viewbutton');
 
-    // Show the toggleDarkMode button when shrinkbutton is present
+    // show the toggleDarkMode button when shrinkbutton is present
     toggleDarkMode.style.display = 'block';
 }
 
@@ -140,7 +139,8 @@ viewButton.addEventListener('click', function(event) {
     }
 });
 
-// Check for saved theme preference in the cookie
+// come to the dark side, we have cookies
+// check for saved theme preference in the cookie
 let theme = document.cookie.split('; ').find(row => row.startsWith('theme='));
 if (theme) {
     theme = theme.split('=')[1];

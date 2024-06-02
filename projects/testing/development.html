@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Development and version control</title>
+    <link rel="stylesheet" href="../projects.css">
+</head>
+<script src="../../js/gsap.min.js"></script>
+<script src="../../js/marked.js"></script>
+<body>
+    <div id="overlay"></div>
+    <a href="projects.html" target="_top">
+        <div class="viewbutton" title="Expand view"></div>
+    </a>
+    <div class="toggledarkmode" title="Toggle view"></div>
+    <div class="container">
+        <div class="left-column">
+            <div class="imagebox">
+                <div class="imagefile"></div>
+            </div>
+        </div>
+        <div class="main">
+            <div id="buttons"></div>
+            <div class="learningoutcomes">
+                <a href="interactive.html" class="outcomesbutton inte">INTERACTIVE</a>
+                <a href="development.html" class="outcomesbutton deve">DEVELOPMENT</a>
+                <a href="iterative.html" class="outcomesbutton iter">ITERATIVE</a>
+                <a href="professional.html" class="outcomesbutton prof">PROFESSIONAL</a>
+                <a href="leadership.html" class="outcomesbutton lead">LEADERSHIP</a>
+            </div>
+            <div class="content" style="border-color: #AAADFF;">
+                <img src="lo2.png" style="width: 50%; height: auto;">
+                <p>Overal reflection: This semester, I've learned the importance of staying informed about current trends in design and interactive media.  Experimenting with interactive elements in my projects has been a rewarding challenge, allowing me to explore new ways of engaging users with the brand identity. Not every project has been able to get to the same level of interactivity but we each had our own tasks.</p>
+                <h2>Portfolio</h2>
+                <p>
+                Context: My portfolio page is a both a showcase of my learning outcomes and my development skills. The page itself is meant to showcase fun things I’ve been learning, incorporated into the design itself. I like developing fun projects, so for me it was important to incorporate this into my site.
+
+                Version control: From the beginning I’ve found it important to keep a Github repo where changes are kept and so I can always have a backup when something breaks. I keep this regularly updated.
+                
+                Development: My initial portfolio design originated from learning and playing around with Javascript, challenging myself to make interesting concepts. After I've received feedback to take a few steps back and think about how my website should look and how it should function. Inspired by Star Trek's LCARS interface, I've created a design that to me is both visually appealing and functional.
+                
+                JSON loader: An important part for ease of use in developing my website is making a JSON based loader. Instead of having to manually add projects to the website, I can now just add a new project to the JSON file and it will automatically be added to the website, including the appropriate images and links. The loader also gives the URL an identifier so that the page can be bookmarked or remembered without having to reload the JSON, as it isn't loading in a seperate HTML page.
+                
+                GSAP and animation: I had no experience with GSAP but I've wanted to make my site animated for a long time, which you can see the result of on this same page. GSAP is a great easy to use library that lets me animate my page without having to use keyframes (as often). 
+                
+                Easy to understand code: Something which is important to me is that my code is easy to understand to both me and other people, that's why I always add comments to my code and use 1TBS indentation. Seen on the Github.
+                
+                Reflection: I enjoy developing fun things, I hope I’ll be able to get more opportunities for development. One thing I had issues with was the JSON loader. Making it from scratch was a nice challenge and I had thought this would make it more manageable to add in new content. However, this proved to not be the case. Adding in images inside text proved to be too much of a hassle and the entire website would look the same. Text would always be in roughly the same place, with no breaks in between. That’s why I had to make the tough decision to go back to regular HTML and CSS.</p>
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="infoboard"><h1></h1><p></p></div>
+        </div>
+    </div>
+    <script>
+        const toggleDarkMode = document.querySelector('.toggledarkmode');
+        // come to the dark side, we have cookies
+        // check for saved theme preference in the cookie
+        let theme = document.cookie.split('; ').find(row => row.startsWith('theme='));
+        if (theme) {
+            theme = theme.split('=')[1];
+            document.body.classList.add(theme);
+        }
+
+        toggleDarkMode.addEventListener('click', function() {
+            document.body.classList.toggle('lightmode');
+            document.body.classList.toggle('darkmode');
+
+            // save theme preference in a cookie
+            if (document.body.classList.contains('lightmode')) {
+                document.cookie = "theme=lightmode; path=/";
+            } else {
+                document.cookie = "theme=darkmode; path=/";
+            }
+        });
+
+    </script>
+</body>
+</html>

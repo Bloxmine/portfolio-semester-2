@@ -1,6 +1,6 @@
 :root {
     --background-color: #000000;
-    --text-color-primary: #000000;
+    --text-color-primary: #ffffff;
     --text-color-secondary: #ffffff;
     --text-color-active: #ffffff;
     --font-primary: 'AtramentWeb', Arial, Helvetica, sans-serif;
@@ -12,9 +12,8 @@
 
 .lightmode {
     --background-color: #ffffff;
-    --text-color-primary: #000000;
-    --text-color-secondary: #000000;
-    --text-color-active: #000000;
+    --text-color-secondary: #323232;
+    --text-color-active: #1a1a1a;
     --font-primary: 'AtramentWeb', Arial, Helvetica, sans-serif;
     --LCARS-button-primary: #AAADFF;
     --LCARS-button-secondary: #D77C79;
@@ -88,6 +87,8 @@ body {
     z-index: 9999;
     margin: 10px;
     cursor: pointer;
+    color: var(--text-color-primary);
+    text-decoration: none;
 }
 
 .viewbutton {
