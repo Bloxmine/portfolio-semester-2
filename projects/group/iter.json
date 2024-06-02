@@ -32,6 +32,14 @@
             "imagelink": "projects/group/soundwave/challenges/challenges.html",
             "description": "Subshootica",
             "projectcontent": "Subshootica started as a challenge from a lesson by Maikel to animate elements on a page with CSS. From that challenge, I started working on a game that can be played in the browser [intial screenshot here].\n\n The design of the game evolved through an iterative process based on valuable feedback from peers.  This included exploring variations of the main character's design, experimenting with different enemy types, and refining the background and user interface elements. In person feedback I received generally had to do with confusion in the enemy designs and the lack of lives or powerups. [powerups en enemies hier] \n\n In terms of using appropriate software for this projects, I have used Aseprite next to Affinity Photoshop. Aseprite is a semi-professional pixel art software that I've been using for a few years now. And using my iPad as a drawing tablet allows me to have fine control. Aseprite is more suited for creating _Gameboy_ style graphics than Affinity Photo because it is made with pixel art in mind. \n\n_Iterations_: Thanks to the feedback I've received from my peers I've been able to iterate on the design of the game. I've made a few different versions of the main character and the enemies. I've also made a few different versions of the background and the UI. \n\n**Click on the image to see a gallery of the iterations and some explinations**"
+        },
+        {
+            "title": "Personal Portfolio",
+            "imagefile": "images/project5.jpg",
+            "images": ["images/project1.jpg", "images/project2.jpg", "images/project3.jpg"],
+            "imagelink": "projects/group/soundwave/portfolio/portfolio.html",
+            "description": "",
+            "projectcontent": "My portfolio has seen some iterations. Here is one of them: {{image1}}. And here is another: {{image2}}. Finally, this is the last one: {{image3}}"
         }
     ]
 }
