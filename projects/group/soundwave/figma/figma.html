@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figma</title>
     <link rel="stylesheet" href="../viewer.css">
+    <style>
+        .hidden-image {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <a href="../../../../projects.html?id=prof">
@@ -14,13 +19,19 @@
     <p id="caption">Caption 1</p>
     <button id="prev">←</button>
     <button id="next">→</button>
+
+    <!-- Hidden images with data attributes -->
+    <img class="hidden-image" data-src="image1.jpg" data-caption="Caption 1">
+    <img class="hidden-image" data-src="image2.jpg" data-caption="Caption 2">
+    <img class="hidden-image" data-src="image3.jpg" data-caption="Caption 3">
+    <img class="hidden-image" data-src="image4.jpg" data-caption="Caption 4">
+
     <script>
-        let images = [
-            {src: "image1.jpg", caption: "Caption 1"},
-            {src: "image2.jpg", caption: "Caption 2"},
-            {src: "image3.jpg", caption: "Caption 3"},
-            {src: "image4.jpg", caption: "Caption 4"},
-        ];
+        // Collect images from HTML
+        let images = Array.from(document.getElementsByClassName("hidden-image")).map(img => ({
+            src: img.getAttribute("data-src"),
+            caption: img.getAttribute("data-caption")
+        }));
         let index = 0;
 
         document.getElementById("next").addEventListener("click", function() {
