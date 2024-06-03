@@ -10,6 +10,7 @@
     --active-text-color: #ffffff;
     --outcomesbutton-color: #000000;
     --forwards-backwards-text: #000000;
+    --text-color-link: #e7e7e7;
     --overlay-gradient: linear-gradient(to bottom, rgba(0,0,0,0) 90%, rgba(0,0,0,1) 100%);
 }
 
@@ -20,6 +21,7 @@
     --font-primary: 'AtramentWeb', Arial, Helvetica, sans-serif;
     --LCARS-button-primary: #AAADFF;
     --LCARS-button-secondary: #D77C79;
+    --text-color-link: #21b0f3;
     --backbutton-color: #FFD915;
     --active-text-color: #000000;
     --outcomesbutton-color: #ffffff;
@@ -90,7 +92,7 @@ body {
 }
 
 .contentimage img {
-    width: 100%;
+    width: 300px;
     height: auto;
     border-radius: 20px;
 }
@@ -332,12 +334,12 @@ body.lightmode .toggledarkmode {
 }
 
 p a {
-    color: rgb(255, 255, 255);
-    text-shadow: 0 0 5px #ffffff;
+    color: var(--text-color-link);
+    text-shadow: 0 0 5px var(--text-color-link);
 }
 
 p a:hover {
-    color: rgb(255, 255, 255);
+    color: var(--text-color-active);
     text-shadow: 0 0 10px #ffffff;
 }
 
