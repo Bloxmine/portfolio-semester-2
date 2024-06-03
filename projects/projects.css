@@ -7,6 +7,8 @@
     --LCARS-button-primary: #AAADFF;
     --LCARS-button-secondary: #D77C79;
     --backbutton-color: #FFD915;
+    --active-text-color: #ffffff;
+    --outcomesbutton-color: #000000;
     --overlay-gradient: linear-gradient(to bottom, rgba(0,0,0,0) 90%, rgba(0,0,0,1) 100%);
 }
 
@@ -18,6 +20,8 @@
     --LCARS-button-primary: #AAADFF;
     --LCARS-button-secondary: #D77C79;
     --backbutton-color: #FFD915;
+    --active-text-color: #000000;
+    --outcomesbutton-color: #ffffff;
     --overlay-gradient: linear-gradient(to bottom, rgba(255,255,255,0) 90%, rgba(255,255,255,1) 100%);
 }
 
@@ -77,6 +81,40 @@ body {
     border: #000000 5px solid;
     border-radius: 20px;
     padding: 20px;
+}
+
+.contentimage {
+    position: relative;
+    display: inline-block;
+}
+
+.contentimage img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.contentimage img:hover {
+    box-shadow: 0 0 10px 5px #ffffff;
+}
+
+.contentimage::after {
+    content: "Click to see more";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    width: 80%;
+    height: 20%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0,0,0,0.5));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
+    margin: auto;
+    border-radius: 20px;
+    pointer-events: none;
 }
 
 .outcomesbutton {
@@ -171,6 +209,12 @@ body.lightmode .toggledarkmode {
     background-color: #ff9e9e;
 }
 
+.outcomesbutton.inte.active {
+    background-color: var(--outcomesbutton-color);
+    color: var(--active-text-color);
+    box-shadow: inset 0 0 0 5px #D77C79;
+}
+
 /* development and version control */
 .outcomesbutton.deve {
     background-color: #AAADFF;
@@ -178,6 +222,12 @@ body.lightmode .toggledarkmode {
 
 .outcomesbutton.deve:hover {
     background-color: #d1d1ff;
+}
+
+.outcomesbutton.deve.active {
+    background-color: var(--outcomesbutton-color);
+    color: var(--active-text-color);
+    box-shadow: inset 0 0 0 5px #AAADFF;
 }
 
 /* iterative design */
@@ -188,6 +238,12 @@ body.lightmode .toggledarkmode {
 .outcomesbutton.iter:hover {
     background-color: #7cf57c;
 }
+
+.outcomesbutton.iter.active {
+    background-color: var(--outcomesbutton-color);
+    color: var(--active-text-color);
+    box-shadow: inset 0 0 0 5px #50ef5a;
+}
 /* professional standard */
 .outcomesbutton.prof {
     background-color: #f0d84b;
@@ -196,9 +252,25 @@ body.lightmode .toggledarkmode {
 .outcomesbutton.prof:hover {
     background-color: #f5e77c;
 }
+
+.outcomesbutton.prof.active {
+    background-color: var(--outcomesbutton-color);
+    color: var(--active-text-color);
+    box-shadow: inset 0 0 0 5px #f0d84b;
+}
 /* personal leadership */
 .outcomesbutton.lead {
     background-color: #fa99e1;
+}
+
+.outcomesbutton.lead:hover {
+    background-color: #f5b3f5;
+}
+
+.outcomesbutton.lead.active {
+    background-color: var(--outcomesbutton-color);
+    color: var(--active-text-color);
+    box-shadow: inset 0 0 0 5px #fa99e1;
 }
 
 .imagebox {
