@@ -10,7 +10,7 @@
 <script src="../../js/marked.js"></script>
 <body>
     <div id="overlay"></div>
-    <a href="projects.html" target="_top">
+    <a href="development.html" target="_top">
         <div class="viewbutton" title="Expand view"></div>
     </a>
     <div class="toggledarkmode" title="Toggle view"></div>
@@ -53,28 +53,6 @@
             <div class="infoboard"><h1></h1><p></p></div>
         </div>
     </div>
-    <script>
-        const toggleDarkMode = document.querySelector('.toggledarkmode');
-        // come to the dark side, we have cookies
-        // check for saved theme preference in the cookie
-        let theme = document.cookie.split('; ').find(row => row.startsWith('theme='));
-        if (theme) {
-            theme = theme.split('=')[1];
-            document.body.classList.add(theme);
-        }
-
-        toggleDarkMode.addEventListener('click', function() {
-            document.body.classList.toggle('lightmode');
-            document.body.classList.toggle('darkmode');
-
-            // save theme preference in a cookie
-            if (document.body.classList.contains('lightmode')) {
-                document.cookie = "theme=lightmode; path=/";
-            } else {
-                document.cookie = "theme=darkmode; path=/";
-            }
-        });
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

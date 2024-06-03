@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>Interactive Media Products</title>
     <link rel="stylesheet" href="../projects.css">
 </head>
 <script src="../../js/gsap.min.js"></script>
 <script src="../../js/marked.js"></script>
 <body>
     <div id="overlay"></div>
-    <a href="projects.html" target="_top">
+    <a href="interactive.html" target="_top">
         <div class="viewbutton" title="Expand view"></div>
     </a>
     <div class="toggledarkmode" title="Toggle view"></div>
@@ -66,31 +66,6 @@
             <div class="infoboard"><h1>Overal reflection</h1><p> This semester, I've learned the importance of staying informed about current trends in design and interactive media.  Experimenting with interactive elements in my projects has been a rewarding challenge, allowing me to explore new ways of engaging users with the brand identity. Not every project has been able to get to the same level of interactivity but we each had our own tasks.</p></div>
         </div>
     </div>
-    <script>
-        // GSAP animations
-        gsap.from('.outcomesbutton', { duration: 0.5, y: -20, opacity: 0, stagger: 0.1 });
-
-        const toggleDarkMode = document.querySelector('.toggledarkmode');
-        // come to the dark side, we have cookies
-        // check for saved theme preference in the cookie
-        let theme = document.cookie.split('; ').find(row => row.startsWith('theme='));
-        if (theme) {
-            theme = theme.split('=')[1];
-            document.body.classList.add(theme);
-        }
-
-        toggleDarkMode.addEventListener('click', function() {
-            document.body.classList.toggle('lightmode');
-            document.body.classList.toggle('darkmode');
-
-            // save theme preference in a cookie
-            if (document.body.classList.contains('lightmode')) {
-                document.cookie = "theme=lightmode; path=/";
-            } else {
-                document.cookie = "theme=darkmode; path=/";
-            }
-        });
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
