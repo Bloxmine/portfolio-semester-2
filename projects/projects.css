@@ -120,6 +120,35 @@ body {
     pointer-events: none;
 }
 
+/* linkless image */
+.linkless {
+    position: relative;
+    display: inline-block;
+}
+
+.linkless img {
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.linkless::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    width: 80%;
+    height: 20%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
+    margin: auto;
+    border-radius: 20px;
+    pointer-events: none;
+}
+
 .outcomesbutton {
     background-color: var(--LCARS-button-primary);
     font-size: 1rem;

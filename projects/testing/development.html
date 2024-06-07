@@ -31,7 +31,7 @@
             </div>
             <div class="content" style="border-color: #AAADFF;">
                 <img src="lo2.png" style="width: 50%; height: auto;">
-                <p>Overal reflection: This semester, I've learned the importance of staying informed about current trends in design and interactive media.  Experimenting with interactive elements in my projects has been a rewarding challenge, allowing me to explore new ways of engaging users with the brand identity. Not every project has been able to get to the same level of interactivity but we each had our own tasks.</p>
+                <p>I did a lot of development in this semester. Especially in the first half. I like creating fun things and messing around with Javascript. And I really enjoyed expanding on the challenges we did during development class. Sadly my personal project had to revolve more around other learning outcomes and I just didn’t have enough time to focus on development when I was still lacking in some parts of other learning outcomes. However, I hope that the person reading this thinks the projects I’ve shown here are as fun and interesting as I think they are!</p>
                 <h1>Portfolio</h1>
                 <p>
                 <h3>Context:</h3><p> My portfolio page is a both a showcase of my learning outcomes and my development skills. The page itself is meant to showcase fun things I’ve been learning, incorporated into the design itself. I like developing fun projects, so for me it was important to incorporate this into my site.
@@ -41,34 +41,77 @@
                         <img src="/images/deve/images/github.jpg"></img>
                     </a>
                 </div><p>From the beginning I’ve found it important to keep a Github repo where changes are kept and so I can always have a backup when something breaks. I keep this regularly updated.</p>
-                <div id="image-slider">
-                    <img id="display" src="/images/deve/images/project1.jpg">
-                    <div id="caption-and-buttons">
-                        <p id="caption">Caption 1</p>
-                        <button id="prev">←</button>
-                        <button id="next">→</button>
-                    </div>
-                
-                    <!-- Hidden images with data attributes -->
-                    <img class="hidden-image" data-src="/images/deve/images/project1.jpg" data-caption="Caption 1">
-                    <img class="hidden-image" data-src="/images/deve/images/project2.jpg" data-caption="Caption 2">
-                    <img class="hidden-image" data-src="/images/deve/images/project3.jpg" data-caption="Caption 3">
-                    <img class="hidden-image" data-src="image4.jpg" data-caption="Caption 4">
-                </div>
                 
                 <h3>Development:</h3> <p>My initial portfolio design originated from learning and playing around with Javascript, challenging myself to make interesting concepts. After I've received feedback to take a few steps back and think about how my website should look and how it should function. Inspired by Star Trek's LCARS interface, I've created a design that to me is both visually appealing and functional.</p>
                 
-                JSON loader: An important part for ease of use in developing my website is making a JSON based loader. Instead of having to manually add projects to the website, I can now just add a new project to the JSON file and it will automatically be added to the website, including the appropriate images and links. The loader also gives the URL an identifier so that the page can be bookmarked or remembered without having to reload the JSON, as it isn't loading in a seperate HTML page.
+                <h3>JSON loader:</h3><p> An important part for ease of use in developing my website is making a JSON based loader. Instead of having to manually add projects to the website, I can now just add a new project to the JSON file and it will automatically be added to the website, including the appropriate images and links. The loader also gives the URL an identifier so that the page can be bookmarked or remembered without having to reload the JSON, as it isn't loading in a seperate HTML page.</p>
                 
-                GSAP and animation: I had no experience with GSAP but I've wanted to make my site animated for a long time, which you can see the result of on this same page. GSAP is a great easy to use library that lets me animate my page without having to use keyframes (as often). 
+                <h3>GSAP and animation:</h3><p>I had no experience with GSAP but I've wanted to make my site animated for a long time, which you can see the result of on this same page. GSAP is a great easy to use library that lets me animate my page without having to use keyframes (as often).</p> 
                 
-                Easy to understand code: Something which is important to me is that my code is easy to understand to both me and other people, that's why I always add comments to my code and use 1TBS indentation. Seen on the Github.
+                <h3>Easy to understand code:</h3><p>Something which is important to me is that my code is easy to understand to both me and other people, that's why I always add comments to my code and use 1TBS indentation. Seen on the Github.</p>
                 
-                Reflection: I enjoy developing fun things, I hope I’ll be able to get more opportunities for development. One thing I had issues with was the JSON loader. Making it from scratch was a nice challenge and I had thought this would make it more manageable to add in new content. However, this proved to not be the case. Adding in images inside text proved to be too much of a hassle and the entire website would look the same. Text would always be in roughly the same place, with no breaks in between. That’s why I had to make the tough decision to go back to regular HTML and CSS.</p>
+                <h3>Reflection:</h3><p>I enjoy developing fun things, I hope I’ll be able to get more opportunities for development. One thing I had issues with was the JSON loader. Making it from scratch was a nice challenge and I had thought this would make it more manageable to add in new content. However, this proved to not be the case. Adding in images inside text proved to be too much of a hassle and the entire website would look the same. Text would always be in roughly the same place, with no breaks in between. That’s why I had to make the tough decision to go back to regular HTML and CSS.</p>
+                <h1>Fontys OVP</h1><div class="contentimage" style="float: right;">
+                    <a href="/ovp/index.html">
+                        <img src="/images/deve/images/site.png"></img>
+                    </a>
+                </div>
+                <h3>Context:</h3><p>The OVP site needed a redesign to attract new students as well as improving visual clarity and reducing clutter. One of the important aspects of this project was to incorporate an easter egg.</p>
+                <i>Click the image to view the finished site.</i>
+                <h3>Set up:</h3><p>The website itself was made in multiple parts by the three of us. I did the initial rough layout based on the  <a href="https://www.figma.com/design/fYWNeY0iyvJSwSCjAQ3nBR/Fontys-ICT-deeltijd-websiite?node-id=0-1&t=av6UOl7K5YwmGgM6-1">Figma file</a>, others did the navbar, picture viewer and a few miscellaneous parts.</p>
+
+                <h3>Tools used:</h3><p>I made a <a href="https://github.com/Bloxmine/fontys-ovp">Github repository</a> in which all three of use could work in their own branch, then eventually merging it and solving conflicts. It was important to use variables for ease of use when activating the easter egg because this keeps things nice and tidy.</p>
+
+                <h3>Easter egg:</h3><div class="linkless"  style="float: right;">
+                    <img src="/images/deve/images/ovpcode.png"></img>
+                </div><p>The easter egg makes the page look like it is taking place in the Matrix. It changes the CSS root so that all elements change consistently. It also changed pictures using a system I came up with where it would point every image to a counterpart in a different folder. 
+                This saved me a lot of work and shows that it pays off to come up with something novel than finding existing code online.</p>
+                <p>
+                Not that I didn’t also do that, because in the case of the typical Matrix style cascading text in the background, I decided it was better to find someone’s existing code. That saved me time which allowed me to focus on other parts of the site.</p><p>I also implemented the Konami code where it listens to the input from the user, also indicating the wrong key is pressed.</p>
+
+                <h3>Reflection:</h3><p>We each have different coding styles so making it work together can be a massive challenge. Thankfully by setting clear rules in a few areas, such as using one css, using the same basic variables and working in multiple branches, we managed to complete the site and successfully merge our work.</p>
+                <h1>Sushootica</h1>
+
+                <h3>Context:</h3><div class="contentimage" style="float: right;">
+                    <a href="/subshootica.html">
+                        <img src="/images/inte/images/project3.jpg"></img>
+                    </a>
+                </div><p> One of the lessons in development class was animating a div using CSS and Javascript. I took this challenge further to create Subshootica, an entire game with custom made graphics and a complete gameplay loop.</p>
+                <h3>Game setup:</h3><p> Instead of using a canvas, I decided on expanding the challenge in the same way as originally intended: using divs. This meant making complex Javascript code to generate and keep track of divs. As well as making them interact with the player (the mouse cursor) and other objects. The player can shoot a torpedo, that collides with enemies. Points are saved and collected and the game includes a health system as well as having powerups. </p>
+                <h3>Reflection:</h3><div class="linkless"  style="float: right;">
+                    <img src="/images/deve/images/project4.jpg"></img>
+                </div><p> If I were to recreate the game now, I would definitely use a canvas, as well as setting a clear goal from the beginning. Right now, I iterated a lot based on feedback and gameplay changed because of it, but I didn’t set a goal. It was a learning process so I changed a lot of code during development which can be seen in the Git repo.</p>
+                <p><a href="https://github.com/Bloxmine/Subshootica/">Click here to see the Git repository.</a></p>
+                <h1>Spitfire</h1><div class="contentimage" style="float: right;">
+                    <a href="/threejs/spitfire/index.html">
+                        <img src="/images/deve/images/project2.jpg"></img>
+                    </a>
+                </div><p>
+
+                    I had previously little experience with Three.js, but I’ve been figuring out how it functions and how I can integrate it into my projects. The spinning earth on my portfolio site was created using Three.js. I have also made a Spitfire model and animated it as an extra challenge for development class.
+                    The Spitfire model was made in Blender and then imported into Three.js. I had to figure out how to make the model move and rotate in the way I wanted it to. This was a fun challenge and I’m happy with the result.</p>
+                    <p><a href="https://github.com/Bloxmine/SpitfireThreejs/">Click here to see the Git repository.</a></p>   
+                    <h1>Challenges</h1>
+                    <div id="image-slider">
+                        <img id="display" src="/images/deve/images/google.jpg">
+                        <div id="caption-and-buttons">
+                            <p id="caption">Google but bad</p>
+                            <button id="prev">←</button>
+                            <button id="next">→</button>
+                        </div>
+                    
+                        <!-- Hidden images with data attributes -->
+                        <img class="hidden-image" data-src="/images/deve/images/google.jpg" data-caption="Google but bad">
+                        <img class="hidden-image" data-src="/images/deve/images/out2getya.jpg" data-caption="Out2GetYa, an unfinished Outrun mixed with Carmageddon prototype">
+                        <img class="hidden-image" data-src="/images/deve/images/sub3d.jpg" data-caption="Subshootica 3D - unfinished">
+                    </div>
+                    <p>During the first week we had a challenge regarding good and bad user experience: we had to create a site that normally has good UX and make it bad, and vice versa. I chose to turn Google into a terrible experience full of effects, javascript based pop ups and excessive animation.</p>
+                    <p><a href="https://hein.neocities.org/googlesux">Click here to see the site in action</a></p>
+                    <p>I also made some other projects that I didn’t finish. Out2GetYa was a mix between Outrun and Carmageddon, but I didn’t have enough time to finish it. Subshootica 3D was a 3D version of Subshootica, but I had to focus more on other learning outcomes.</p>
             </div>
         </div>
         <div class="right-column">
-            <div class="infoboard"><h1></h1><p></p></div>
+            <div class="infoboard"><h1>About development</h1><p>I did a lot of development in this semester. Especially in the first half. I like creating fun things and messing around with Javascript. And I really enjoyed expanding on the challenges we did during development class. Sadly my personal project had to revolve more around other learning outcomes and I just didn’t have enough time to focus on development when I was still lacking in some parts of other learning outcomes. However, I hope that the person reading this thinks the projects I’ve shown here are as fun and interesting as I think they are!</p></div>
         </div>
     </div>
     <script src="script.js"></script>
