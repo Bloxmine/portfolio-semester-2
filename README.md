@@ -26,6 +26,14 @@ The JSON loader is the heart of my website. (W.I.P)
 - Marked.js
 - Three.js (inc. OrbitalControls)
 
+## Location of important elements
+
+` /projects/projects.js `
+- This is where the darkmode code, JSON loader and GSAP are located for the projects pages.
+
+` /src/index.js `
+- This is where the code for Three.js is located. This compiles into main.js located in the 'dist' folder.
+
 ## Notes
 
 The Three.js globe requires a somewhat modern GPU. It has been tested to work on integrated Intel graphics from at least **2012** onwards, but it has shown not to work when trying to render on a 2009 nVidia GPU.
