@@ -36,6 +36,6 @@ The JSON loader is the heart of my website. (W.I.P)
 
 ## Notes
 
-The Three.js globe requires a somewhat modern GPU. It has been tested to work on integrated Intel graphics from at least **2012** onwards, but it has shown not to work when trying to render on a 2009 nVidia GPU.
+The Three.js globe requires a somewhat modern GPU. It has been tested to work on integrated Intel graphics from at least **2012** onwards, but it has shown _not to work_ when trying to render on a 2009 nVidia GPU. But YMMV.
 
 Otherwise the website should work in any modern browser, but has been tested in Chromium, Firefox and Safari. But most likely will work in any Blink, Gecko or Webkit based browser.

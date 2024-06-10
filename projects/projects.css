@@ -372,6 +372,20 @@ p a:hover {
     text-shadow: 0 0 10px #ffffff;
 }
 
+/* 600 by 200 */
+.wideimage {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.wideimage img {
+    width: 100%;
+    height: auto;
+}
+
 
 @font-face {
     font-family: 'AtramentWeb';
