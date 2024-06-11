@@ -386,6 +386,17 @@ p a:hover {
     height: auto;
 }
 
+.sideimage {
+    position: relative;
+    display: inline-block;
+}
+
+.sideimage img {
+    width: 300px;
+    height: auto;
+}
+
+
 
 @font-face {
     font-family: 'AtramentWeb';
