@@ -48,6 +48,16 @@ body::after {
     font-family: var(--font-family);
 }
 
+.social-media {
+    display: flex;
+    justify-content: space-around; /* Adjust as needed */
+}
+
+.social-media a img {
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+}
+
 @font-face {
     font-family: 'AtramentWeb';
     src: url(../fonts/AtramentWeb.woff) format('woff');
