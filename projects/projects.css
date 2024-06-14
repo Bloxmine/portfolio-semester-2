@@ -15,8 +15,8 @@
 }
 
 .lightmode {
-    --background-color: #ffffff;
-    --text-color-secondary: #323232;
+    --background-color: #e7e7ed;
+    --text-color-secondary: #4b4b4b;
     --text-color-active: #1a1a1a;
     --font-primary: 'AtramentWeb', Arial, Helvetica, sans-serif;
     --LCARS-button-primary: #AAADFF;
@@ -24,7 +24,7 @@
     --text-color-link: #21b0f3;
     --backbutton-color: #FFD915;
     --active-text-color: #000000;
-    --outcomesbutton-color: #ffffff;
+    --outcomesbutton-color: #e7e7ed;
     --overlay-gradient: linear-gradient(to bottom, rgba(255,255,255,0) 90%, rgba(255,255,255,1) 100%);
 }
 
