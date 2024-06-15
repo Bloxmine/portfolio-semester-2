@@ -18,7 +18,6 @@
     --background-color: #e7e7ed;
     --text-color-secondary: #4b4b4b;
     --text-color-active: #1a1a1a;
-    --font-primary: 'AtramentWeb', Arial, Helvetica, sans-serif;
     --LCARS-button-primary: #AAADFF;
     --LCARS-button-secondary: #D77C79;
     --text-color-link: #21b0f3;
@@ -26,6 +25,10 @@
     --active-text-color: #000000;
     --outcomesbutton-color: #e7e7ed;
     --overlay-gradient: linear-gradient(to bottom, rgba(255,255,255,0) 90%, rgba(255,255,255,1) 100%);
+}
+
+.readingfont {
+    --font-primary: 'Alegreya', Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -226,6 +229,27 @@ body {
 
 body.lightmode .toggledarkmode {
     background-image: url('moon.png');
+}
+
+.changeFont {
+    background-color: var(--backbutton-color);
+    padding: 20px 20px;
+    border-radius: 10px;
+    z-index: 9999;
+    margin: 10px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 110px;
+    transform: translateY(-50%);
+    background-image: url('font.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.changeFont:hover {
+    background-color: #fff0a3;
 }
 
 .outcomesbutton:hover {

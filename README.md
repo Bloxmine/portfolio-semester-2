@@ -31,6 +31,9 @@ The JSON loader is the heart of my website. (W.I.P)
 ` /projects/projects.js `
 - This is where the darkmode code, JSON loader and GSAP are located for the projects pages.
 
+` /project/testing/script.js `
+- This is where the gallery code is located.
+
 ` /src/index.js `
 - This is where the code for Three.js is located. This compiles into main.js located in the 'dist' folder.
 

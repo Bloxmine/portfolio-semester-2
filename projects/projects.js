@@ -159,3 +159,15 @@ toggleDarkMode.addEventListener('click', function() {
     }
 });
 }
+
+// when the user clicks on the changefont button, the variable --font-primary will be changed to Arial
+document.addEventListener('DOMContentLoaded', function() {
+    let changeFont = document.getElementById('changeFont'); // Assuming the button has an ID 'changeFont'
+    if (changeFont) {
+        changeFont.addEventListener('click', function() {
+            document.documentElement.style.setProperty('--font-primary', 'Arial');
+        });
+    } else {
+        console.error('changeFont button not found');
+    }
+});

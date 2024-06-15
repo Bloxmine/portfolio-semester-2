@@ -46,24 +46,23 @@
                 }
             });
             }
-
+            // image carousel
             document.addEventListener('DOMContentLoaded', function() {
-                        // Collect images from HTML
-        let images = Array.from(document.getElementsByClassName("hidden-image")).map(img => ({
-            src: img.getAttribute("data-src"),
-            caption: img.getAttribute("data-caption")
-        }));
-        let index = 0;
+            let images = Array.from(document.getElementsByClassName("hidden-image")).map(img => ({
+                src: img.getAttribute("data-src"),
+                caption: img.getAttribute("data-caption")
+            }));
+            let index = 0;
 
-        document.getElementById("next").addEventListener("click", function() {
-            index = (index + 1) % images.length;
-            document.getElementById("display").src = images[index].src;
-            document.getElementById("caption").innerText = images[index].caption;
-        });
+            document.getElementById("next").addEventListener("click", function() {
+                index = (index + 1) % images.length;
+                document.getElementById("display").src = images[index].src;
+                document.getElementById("caption").innerText = images[index].caption;
+            });
 
-        document.getElementById("prev").addEventListener("click", function() {
-            index = (index - 1 + images.length) % images.length;
-            document.getElementById("display").src = images[index].src;
-            document.getElementById("caption").innerText = images[index].caption;
+            document.getElementById("prev").addEventListener("click", function() {
+                index = (index - 1 + images.length) % images.length;
+                document.getElementById("display").src = images[index].src;
+                document.getElementById("caption").innerText = images[index].caption;
         });
     });
