@@ -14,6 +14,10 @@
     --overlay-gradient: linear-gradient(to bottom, rgba(0,0,0,0) 90%, rgba(0,0,0,1) 100%);
 }
 
+button {
+    border: none;
+}
+
 .lightmode {
     --background-color: #e7e7ed;
     --text-color-secondary: #4b4b4b;
