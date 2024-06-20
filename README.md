@@ -14,9 +14,6 @@ Clone the repo and open _index.html_ in your web browser of choice.
 
 `git clone https://github.com/Bloxmine/portfolio-semester-2`
 
-## What this project consists of
-The JSON loader is the heart of my website. (W.I.P)
-
 ## Technologies used
 
 - HTML
